@@ -1,0 +1,378 @@
+received length = 912 500 c0a8010d
+d71a7d396835e9c6
+0
+Responder cookie is not there.. Have to validate more
+calling cookie generator as cookie is not present in the packet
+In generate cookie response section
+isakmph = 0xbff1f7fc
+isakmph + 1 = 0xbff1f818
+noti = 0xbff1f818
+noti + 1 = 0xbff1f820
+noti->next_payload = 
+noti->payload_length = 0xbff1f81a
+sending len = 56
+ d7
+ 1a 7d 39 68 35 e9 c6 0 0 0 0 0 0 0 0 29
+ 20 22 20 0 0 0 0 0 0 0 38 0 0 0 1c 0
+ 0 40 6 61 6e 62 75 20 69 73 20 74 68 65 20 6d
+ 61 73 73 20 67 75 79
+
+
+
+
+sent successfully
+
+
+
+received length = 940 500 c0a8010d
+d71a7d396835e9c6
+0
+Responder cookie is not there.. Have to validate more
+cookie is present
+************** ep = 0x84b8b90
+In endpoint recv method
+d71a7d396835e9c6
+0
+packet size = 940
+In parser function
+next payload = 41
+In notify parser
+cookie is there
+It is our cookie, cookie validation succeeded
+next = 33
+next = 28
+In parser function
+next payload = 33
+In SA parser
+proposal number = 1
+number of transforms = 1
+transform type = 4
+transform id = 2
+is_encr = 0 iss_prf = 0 is_integ = 0 is_dh = 1
+proposal number = 2
+number of transforms = 37
+transform type = 1
+transform id = 12
+transform type = 1
+transform id = 12
+transform type = 1
+transform id = 12
+transform type = 1
+transform id = 3
+transform type = 1
+transform id = 23
+transform type = 1
+transform id = 23
+transform type = 1
+transform id = 23
+transform type = 3
+transform id = 1
+transform type = 3
+transform id = 2
+transform type = 3
+transform id = 12
+transform type = 3
+transform id = 13
+transform type = 3
+transform id = 14
+transform type = 3
+transform id = 5
+transform type = 2
+transform id = 1
+transform type = 2
+transform id = 2
+transform type = 2
+transform id = 5
+transform type = 2
+transform id = 6
+transform type = 2
+transform id = 7
+transform type = 2
+transform id = 4
+transform type = 4
+transform id = 14
+transform type = 4
+transform id = 23
+transform type = 4
+transform id = 24
+transform type = 4
+transform id = 5
+transform type = 4
+transform id = 15
+transform type = 4
+transform id = 16
+transform type = 4
+transform id = 18
+transform type = 4
+transform id = 2
+transform type = 4
+transform id = 22
+transform type = 4
+transform id = 19
+transform type = 4
+transform id = 20
+transform type = 4
+transform id = 21
+transform type = 4
+transform id = 26
+transform type = 4
+transform id = 25
+transform type = 4
+transform id = 27
+transform type = 4
+transform id = 28
+transform type = 4
+transform id = 29
+transform type = 4
+transform id = 30
+Got the proposal supported by me
+next = 34
+next = 656
+In parser function
+next payload = 34
+In key exchange parser
+d3 c0 98 eb 23 c4 71 95 83 3a 01 c7 18 5a 89 ab 
+60 08 de 66 e6 6e 05 61 f8 54 c3 d1 94 c8 d0 6c 
+d2 10 b3 51 00 78 fd 4c 1f cd 5a 8e a1 c8 5e 97 
+bc 90 7c fc bb 2e f8 01 1b 62 48 db ba 2d a2 4c 
+0c 82 61 98 4f 50 16 9f 2f 5f 74 7f 13 14 f7 cc 
+36 f0 a5 4f 33 88 72 ac ae a8 10 43 f5 d2 08 df 
+ba 52 b3 c9 bf ab 51 2d 4c 20 ef fa 01 b3 d6 32 
+0a a0 ee fe 6e bd cb 30 ed ea 4d 8e 1d 83 d9 dc 
+our public key = 146bb6ad8337d523640c615c3f67359139495b6f6b0a91ff3ad9290f15d902dd5be68858582618e383e6a8e74482ead215a30dd3a12d8f8950212f7fe6f2e6030e2f9d28e5d6cb582548ebda2fcdef9042042cddeccd627734a9606104a30ec75e9ed9ef0eca298d1110a28e746421d20e2c5bf8f7d22fc124f25d0484f9fd72h
+
+next = 40
+next = 136
+In parser function
+next payload = 40
+In nonce parser
+8b 98 6e 0d e6 9c 3b 4c b6 2e e1 a1 26 ef 23 ca 
+cb 03 ed 7e 28 8b 78 56 00 c6 fc 6b 6c d3 cc 0e 
+
+next = 41
+next = 36
+In parser function
+next payload = 41
+In notify parser
+other notify:cookie is not present in the notify
+next = 41
+next = 28
+In parser function
+next payload = 41
+In notify parser
+other notify:cookie is not present in the notify
+next = 0
+next = 28
+In parser function
+next payload = 0
+I think it parsed the packet completely
+In packet builder
+sa payload length = 30
+sending len = 232
+ d7
+ 1a 7d 39 68 35 e9 c6 0 0 0 0 0 0 0 1 21
+ 20 22 20 0 0 0 0 0 0 0 e8 22 0 0 30 0
+ 0 0 2c 1 1 0 4 3 0 0 c 1 0 0 c 80
+ e 0 80 3 0 0 8 2 0 0 2 3 0 0 8 3
+ 0 0 2 3 0 0 8 4 0 0 2 28 0 0 88 0
+ 2 0 0 14 6b b6 ad 83 37 d5 23 64 c 61 5c 3f
+ 67 35 91 39 49 5b 6f 6b a 91 ff 3a d9 29 f 15
+ d9 2 dd 5b e6 88 58 58 26 18 e3 83 e6 a8 e7 44
+ 82 ea d2 15 a3 d d3 a1 2d 8f 89 50 21 2f 7f e6
+ f2 e6 3 e 2f 9d 28 e5 d6 cb 58 25 48 eb da 2f
+ cd ef 90 42 4 2c dd ec cd 62 77 34 a9 60 61 4
+ a3 e c7 5e 9e d9 ef e ca 29 8d 11 10 a2 8e 74
+ 64 21 d2 e 2c 5b f8 f7 d2 2f c1 24 f2 5d 4 84
+ f9 fd 72 0 0 0 14 31 32 33 34 35 36 37 38 39
+ 30 31 32 33 34 35 36
+
+
+
+
+sent successfully
+
+
+
+fuck yeah.. shared key = a5f438670ff3476a3db5aaa3080d73b0980ac2b661c9414953e54a2d94a55b899860cd61141c0ffbbc1fa113bf32a4f583690803f6b2c22b02824e9b6d28bc280cb70af12e8dd6400492f9fb27802a0c8556b72f7d99315b2fdbb1427fb0896ea0090b4cff847b5dc0c8cf8f91fa122bf71fd8cb1ac6fee5fdcb9a32dd959044h
+final = 97bcc53b239000fcae87b34b331ba9ea2319ba31
+iSPI = d71a7d396835e9c6
+rSPI = 100000000000000
+n_r_spi = 100000000000000
+s_len = 65
+nb = 1
+s_len%64 = 1
+T1 = 6cc3fb782d4f24caf1bc7f50ad71c4f431e22fed
+s_len = 85
+nb = 1
+s_len%64 = 21
+T2 (SK_ai) = c51fa7007fcfefdf51e18930bf8020b589b9d8c5
+s_len = 85
+nb = 1
+s_len%64 = 21
+T3 = (SK_ar) 944ff85a49c07928bf347e29ea7f22f3f7cbdd
+s_len = 85
+nb = 1
+s_len%64 = 21
+T4 = (SK_ei) + 4-bytes if SK_er e45e1cc1f148805d1ba833d5e8f363a12423748d
+s_len = 85
+nb = 1
+s_len%64 = 21
+T5 = (remaining 12-bytes of SK_er) 89072e4383c5f65ebe82318fe96951daf368b5ed
+s_len = 85
+nb = 1
+s_len%64 = 21
+T6 = 3cd264833324c7c510f16e16775e1b8c74ad5982
+s_len = 85
+nb = 1
+s_len%64 = 21
+T7 = 6edf72c75a9aa6f680c17ff7742755addda882c7
+s_len = 49
+nb = 0
+s_len%64 = 49
+T8 = a2dac03890d6fa81df82242e3352cd012d776284
+s_len = 69
+nb = 1
+s_len%64 = 5
+T9 = f8ff0813884a7632b44e4ecb953cac288be3e49
+s_len = 69
+nb = 1
+s_len%64 = 5
+T10 = 6d77f324af380f918904258aeb51f28ed734adc
+s_len = 69
+nb = 1
+s_len%64 = 5
+T11 = 45271f6baa7edc6933875185c0a67258de1dea68
+encr inbound = a2dac038 90d6fa81 df82242e 3352cd01
+auth inbound = 2d776284 f8ff0813 884a7632 b44e4ecb 953cac2
+encr outbound = 88be3e49 6d77f324 af380f9 18904258
+auth outbound = aeb51f28 ed734adc 45271f6b aa7edc69 33875185
+************** ep(1) = 0x84b8b90
+r nonce = 31323334
+i nonce = 8b986ed
+T1 = 783c61d9b3793db3acb0dcab53c0ed886384f9e9
+Done with do calculation
+Going to exit
+received length = 380 500 c0a8010d
+d71a7d396835e9c6
+1
+Cookie is present
+0x84b8b90
+14333046010840685271
+In endpoint recv method
+d71a7d396835e9c6
+1
+packet size = 380
+In parser function
+next payload = 46
+In encrypted parser
+next payload = 35
+Initialization vector = ed166dc7
+next = 35
+next = 352
+In parser function
+next payload = 35
+Parse none called
+next = 3
+next = 8
+In parser function
+next payload = 3
+Parse none called
+next = 3
+next = 8
+In parser function
+next payload = 3
+Parse none called
+next = 0
+next = 8
+In parser function
+next payload = 0
+I think it parsed the packet completely
+In packet builder
+sa payload length = 30
+sending len = 232
+ d7
+ 1a 7d 39 68 35 e9 c6 0 0 0 0 0 0 0 1 21
+ 20 23 20 0 0 0 1 0 0 0 e8 22 0 0 30 0
+ 0 0 2c 1 1 0 4 3 0 0 c 1 0 0 c 80
+ e 0 80 3 0 0 8 2 0 0 2 3 0 0 8 3
+ 0 0 2 3 0 0 8 4 0 0 2 28 0 0 88 0
+ 2 0 0 14 6b b6 ad 83 37 d5 23 64 c 61 5c 3f
+ 67 35 91 39 49 5b 6f 6b a 91 ff 3a d9 29 f 15
+ d9 2 dd 5b e6 88 58 58 26 18 e3 83 e6 a8 e7 44
+ 82 ea d2 15 a3 d d3 a1 2d 8f 89 50 21 2f 7f e6
+ f2 e6 3 e 2f 9d 28 e5 d6 cb 58 25 48 eb da 2f
+ cd ef 90 42 4 2c dd ec cd 62 77 34 a9 60 61 4
+ a3 e c7 5e 9e d9 ef e ca 29 8d 11 10 a2 8e 74
+ 64 21 d2 e 2c 5b f8 f7 d2 2f c1 24 f2 5d 4 84
+ f9 fd 72 0 0 0 14 31 32 33 34 35 36 37 38 39
+ 30 31 32 33 34 35 36
+
+
+
+
+sent successfully
+
+
+
+received length = 380 500 c0a8010d
+d71a7d396835e9c6
+1
+Cookie is present
+0x84b8b90
+14333046010840685271
+In endpoint recv method
+d71a7d396835e9c6
+1
+packet size = 380
+In parser function
+next payload = 46
+In encrypted parser
+next payload = 35
+Initialization vector = ed166dc7
+next = 35
+next = 352
+In parser function
+next payload = 35
+Parse none called
+next = 3
+next = 8
+In parser function
+next payload = 3
+Parse none called
+next = 3
+next = 8
+In parser function
+next payload = 3
+Parse none called
+next = 0
+next = 8
+In parser function
+next payload = 0
+I think it parsed the packet completely
+In packet builder
+sa payload length = 30
+sending len = 232
+ d7
+ 1a 7d 39 68 35 e9 c6 0 0 0 0 0 0 0 1 21
+ 20 23 20 0 0 0 1 0 0 0 e8 22 0 0 30 0
+ 0 0 2c 1 1 0 4 3 0 0 c 1 0 0 c 80
+ e 0 80 3 0 0 8 2 0 0 2 3 0 0 8 3
+ 0 0 2 3 0 0 8 4 0 0 2 28 0 0 88 0
+ 2 0 0 14 6b b6 ad 83 37 d5 23 64 c 61 5c 3f
+ 67 35 91 39 49 5b 6f 6b a 91 ff 3a d9 29 f 15
+ d9 2 dd 5b e6 88 58 58 26 18 e3 83 e6 a8 e7 44
+ 82 ea d2 15 a3 d d3 a1 2d 8f 89 50 21 2f 7f e6
+ f2 e6 3 e 2f 9d 28 e5 d6 cb 58 25 48 eb da 2f
+ cd ef 90 42 4 2c dd ec cd 62 77 34 a9 60 61 4
+ a3 e c7 5e 9e d9 ef e ca 29 8d 11 10 a2 8e 74
+ 64 21 d2 e 2c 5b f8 f7 d2 2f c1 24 f2 5d 4 84
+ f9 fd 72 0 0 0 14 31 32 33 34 35 36 37 38 39
+ 30 31 32 33 34 35 36
+
+
+
+
+sent successfully
+
+
+

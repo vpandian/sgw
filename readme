@@ -1,0 +1,1 @@
+ g++ -o sgw sgw.cpp -std=c++11 hash.cpp ep.cpp parse.cpp -lcryptopp

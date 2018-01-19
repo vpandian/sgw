@@ -1,0 +1,1808 @@
+received length = 912 500 c0a8010d
+6e9d7b22c0e1f848
+0
+Responder cookie is not there.. Have to validate more
+calling cookie generator as cookie is not present in the packet
+In generate cookie response section
+isakmph = 0xbff547ec
+isakmph + 1 = 0xbff54808
+noti = 0xbff54808
+noti + 1 = 0xbff54810
+noti->next_payload = 
+noti->payload_length = 0xbff5480a
+sending len = 56
+ 6e
+ 9d 7b 22 c0 e1 f8 48 0 0 0 0 0 0 0 0 29
+ 20 22 20 0 0 0 0 0 0 0 38 0 0 0 1c 0
+ 0 40 6 61 6e 62 75 20 69 73 20 74 68 65 20 6d
+ 61 73 73 20 67 75 79
+
+
+
+
+sent successfully
+
+
+
+received length = 940 500 c0a8010d
+6e9d7b22c0e1f848
+0
+Responder cookie is not there.. Have to validate more
+cookie is present
+************** ep = 0x89eab90
+In endpoint recv method
+6e9d7b22c0e1f848
+0
+packet size = 940
+In parser function
+next payload = 41
+In notify parser
+cookie is there
+It is our cookie, cookie validation succeeded
+next payload = 33
+payload length = 28
+In parser function
+next payload = 33
+In SA parser
+next payload = 34
+payload length = 656
+proph->next_payload = 2
+proph->payload_length = 16
+proph->proposal_number = 1
+proph->protocol_id = 1
+proph->spi_size = 0
+proph->num_transforms = 1
+next payload  = 0
+payload length = 8
+transform type = 4
+transform id = 2
+Found diffie hellman yay
+is_encr = 0 iss_prf = 0 is_integ = 0 is_dh = 1
+spi size = 0
+proph->next_payload = 2
+proph->payload_length = 328
+proph->proposal_number = 2
+proph->protocol_id = 1
+proph->spi_size = 0
+proph->num_transforms = 37
+next payload  = 3
+payload length = 12
+transform type = 1
+transform id = 12
+next payload  = 3
+payload length = 12
+transform type = 1
+transform id = 12
+next payload  = 3
+payload length = 12
+transform type = 1
+transform id = 12
+next payload  = 3
+payload length = 8
+transform type = 1
+transform id = 3
+next payload  = 3
+payload length = 12
+transform type = 1
+transform id = 23
+next payload  = 3
+payload length = 12
+transform type = 1
+transform id = 23
+next payload  = 3
+payload length = 12
+transform type = 1
+transform id = 23
+next payload  = 3
+payload length = 8
+transform type = 3
+transform id = 1
+next payload  = 3
+payload length = 8
+transform type = 3
+transform id = 2
+next payload  = 3
+payload length = 8
+transform type = 3
+transform id = 12
+next payload  = 3
+payload length = 8
+transform type = 3
+transform id = 13
+next payload  = 3
+payload length = 8
+transform type = 3
+transform id = 14
+next payload  = 3
+payload length = 8
+transform type = 3
+transform id = 5
+next payload  = 3
+payload length = 8
+transform type = 2
+transform id = 1
+next payload  = 3
+payload length = 8
+transform type = 2
+transform id = 2
+next payload  = 3
+payload length = 8
+transform type = 2
+transform id = 5
+next payload  = 3
+payload length = 8
+transform type = 2
+transform id = 6
+next payload  = 3
+payload length = 8
+transform type = 2
+transform id = 7
+next payload  = 3
+payload length = 8
+transform type = 2
+transform id = 4
+next payload  = 3
+payload length = 8
+transform type = 4
+transform id = 14
+Found diffie hellman yay
+next payload  = 3
+payload length = 8
+transform type = 4
+transform id = 23
+Found diffie hellman yay
+next payload  = 3
+payload length = 8
+transform type = 4
+transform id = 24
+Found diffie hellman yay
+next payload  = 3
+payload length = 8
+transform type = 4
+transform id = 5
+Found diffie hellman yay
+next payload  = 3
+payload length = 8
+transform type = 4
+transform id = 15
+Found diffie hellman yay
+next payload  = 3
+payload length = 8
+transform type = 4
+transform id = 16
+Found diffie hellman yay
+next payload  = 3
+payload length = 8
+transform type = 4
+transform id = 18
+Found diffie hellman yay
+next payload  = 3
+payload length = 8
+transform type = 4
+transform id = 2
+Found diffie hellman yay
+next payload  = 3
+payload length = 8
+transform type = 4
+transform id = 22
+Found diffie hellman yay
+next payload  = 3
+payload length = 8
+transform type = 4
+transform id = 19
+Found diffie hellman yay
+next payload  = 3
+payload length = 8
+transform type = 4
+transform id = 20
+Found diffie hellman yay
+next payload  = 3
+payload length = 8
+transform type = 4
+transform id = 21
+Found diffie hellman yay
+next payload  = 3
+payload length = 8
+transform type = 4
+transform id = 26
+Found diffie hellman yay
+next payload  = 3
+payload length = 8
+transform type = 4
+transform id = 25
+Found diffie hellman yay
+next payload  = 3
+payload length = 8
+transform type = 4
+transform id = 27
+Found diffie hellman yay
+next payload  = 3
+payload length = 8
+transform type = 4
+transform id = 28
+Found diffie hellman yay
+next payload  = 3
+payload length = 8
+transform type = 4
+transform id = 29
+Found diffie hellman yay
+next payload  = 0
+payload length = 8
+transform type = 4
+transform id = 30
+Found diffie hellman yay
+IKE::Got the proposal supported by me
+next payload = 34
+payload length = 656
+In parser function
+next payload = 34
+In key exchange parser
+26 9c 86 9e dd 45 90 2a b9 5e fb d0 ae ec 61 70 
+d7 83 97 f7 ca 24 a2 b8 bc bd 4c 3a de ea 71 fe 
+0d e1 b1 ef 49 a2 79 1c 74 4e 0f 8f 55 bc 69 20 
+1c 6f 7e a0 87 58 a7 e3 c6 96 0b b0 93 f0 7c 6e 
+da 79 27 01 2a ee 7b df 64 8c 35 5e 64 d4 3d 1d 
+58 e1 3f 47 1e 8e 71 ba a8 9c 7e ed 7a 32 59 24 
+b1 65 c5 49 c9 b3 4c a1 f1 d0 63 a7 40 87 bb f6 
+3c 01 57 70 b1 09 6e 13 02 63 00 de 58 b7 73 2e 
+our public key = 146bb6ad8337d523640c615c3f67359139495b6f6b0a91ff3ad9290f15d902dd5be68858582618e383e6a8e74482ead215a30dd3a12d8f8950212f7fe6f2e6030e2f9d28e5d6cb582548ebda2fcdef9042042cddeccd627734a9606104a30ec75e9ed9ef0eca298d1110a28e746421d20e2c5bf8f7d22fc124f25d0484f9fd72h
+
+next payload = 40
+payload length = 136
+In parser function
+next payload = 40
+In nonce parser
+0b 20 a3 4b 01 2d f1 60 83 44 db 6a 03 db d1 46 
+77 e7 fd 96 2e 8f 31 4c 8b a5 ff da 86 da 0b 83 
+
+next payload = 41
+payload length = 36
+In parser function
+next payload = 41
+In notify parser
+other notify:cookie is not present in the notify
+next payload = 41
+payload length = 28
+In parser function
+next payload = 41
+In notify parser
+other notify:cookie is not present in the notify
+next payload = 0
+payload length = 28
+In parser function
+next payload = 0
+I think it parsed the packet completely
+In packet builder
+sa payload length = 30
+sending len = 232
+ 6e
+ 9d 7b 22 c0 e1 f8 48 0 0 0 0 0 0 0 1 21
+ 20 22 20 0 0 0 0 0 0 0 e8 22 0 0 30 0
+ 0 0 2c 1 1 0 4 3 0 0 c 1 0 0 c 80
+ e 0 80 3 0 0 8 2 0 0 2 3 0 0 8 3
+ 0 0 2 3 0 0 8 4 0 0 2 28 0 0 88 0
+ 2 0 0 14 6b b6 ad 83 37 d5 23 64 c 61 5c 3f
+ 67 35 91 39 49 5b 6f 6b a 91 ff 3a d9 29 f 15
+ d9 2 dd 5b e6 88 58 58 26 18 e3 83 e6 a8 e7 44
+ 82 ea d2 15 a3 d d3 a1 2d 8f 89 50 21 2f 7f e6
+ f2 e6 3 e 2f 9d 28 e5 d6 cb 58 25 48 eb da 2f
+ cd ef 90 42 4 2c dd ec cd 62 77 34 a9 60 61 4
+ a3 e c7 5e 9e d9 ef e ca 29 8d 11 10 a2 8e 74
+ 64 21 d2 e 2c 5b f8 f7 d2 2f c1 24 f2 5d 4 84
+ f9 fd 72 0 0 0 14 31 32 33 34 35 36 37 38 39
+ 30 31 32 33 34 35 36
+
+
+
+
+sent successfully
+
+
+
+fuck yeah.. shared key = 16cff923184db57c194d5863f2366224de3331016a557ad89af8cfa0d3737b37257d1911ad8b00052d7246ce95cdc3789e8ef558b95c1e905ff92532b1686d57fbb5d403d8d8334c406cfc79b84929e05ffda45554c2e7d7df7263fe84a6d94ccf306c53b638d82f9918272f78496c73ba86ef052bd44f24f302808a646f48c6h
+final = 5f00effd62089de48943ffe427b8fa594e23911d
+iSPI = 6e9d7b22c0e1f848
+rSPI = 1
+s_len = 65
+nb = 1
+s_len%64 = 1
+T1 = 794205cfca2d72025818aa981f9748e66afd72a9
+s_len = 85
+nb = 1
+s_len%64 = 21
+T2 (SK_ai) = 2dc0d2e2605fc1b3f2b80de9cabd83b1a55d50b8
+s_len = 85
+nb = 1
+s_len%64 = 21
+T3 = (SK_ar) 020cfcde107c35ba62704db1588c0ce0cfc4b6e
+s_len = 85
+nb = 1
+s_len%64 = 21
+T4 = (SK_ei) + 4-bytes if SK_er a43790bfc1bc23ef777abf9754a3f2ce10b945
+s_len = 85
+nb = 1
+s_len%64 = 21
+T5 = (remaining 12-bytes of SK_er and first 8 bytes of SK_pi) 3671ea476f6ecd05d5eeca65192c86b1a0959f4
+s_len = 85
+nb = 1
+s_len%64 = 21
+T6 = (remaining 12 bytes of SK_pi and first 8 bytes of SK_pr) f35e28df476cf45d8e0e6bc220ad6daf9eacdf5
+s_len = 85
+nb = 1
+s_len%64 = 21
+T7 = (remaining 12 bytes of SK_pr) 14baf424932fcbfce5d00fec65d7720eab30250
+s_len = 49
+nb = 0
+s_len%64 = 49
+T8 = b3ce876bd5f499696854781181525d76517cb82
+s_len = 69
+nb = 1
+s_len%64 = 5
+T9 = d5362a6c5d7c0377e4ac510fa00ff02ca7bd22de
+s_len = 69
+nb = 1
+s_len%64 = 5
+T10 = 56788587b15b2ee126ff91c4cca5c8d3972b7e44
+s_len = 69
+nb = 1
+s_len%64 = 5
+T11 = 63dc67d169ab3221708c62961e2defe1b88c633a
+encr inbound = b3ce876b d5f4996 96854781 181525d7
+auth inbound = 6517cb82 d5362a6c 5d7c0377 e4ac510f a00ff02c
+encr outbound = a7bd22de 56788587 b15b2ee1 26ff91c4
+auth outbound = cca5c8d3 972b7e44 63dc67d1 69ab3221 708c6296
+************** ep(1) = 0x89eab90
+r nonce = 31323334
+i nonce = 0b20a34b
+T1 = 9fb651c79fecb12fe930715a74bd133ba5321446
+Done with do calculation
+Going to exit
+received length = 380 500 c0a8010d
+6e9d7b22c0e1f848
+1
+Cookie is present
+0x89eab90
+5258200780283551086
+In endpoint recv method
+6e9d7b22c0e1f848
+1
+packet size = 380
+In parser function
+next payload = 46
+In encrypted parser
+next payload = 35
+Initiliaziaton vector = 2d 8d 34 af 3e 84 54 a4 84 a4 a7 d2 97 8d 64 de l = 352
+key expansion = a43790bfc1bc23ef777abf9754a3f2ceafbe1b9f6e023870197887e74ddb75291423be7c7a21860c635901eb2e8274c23b19b4d79901d411ac91caa344b6868b8f4de55c164c314dbaddfbeefe6b7d6265d288ae739eb9e3c943420d37283f646b16aeca18881729d1cb5524e6e36a499b423c3383ca2b1a52017e3eb4e21473649832ae75219bab553678401b173f82b9f6238cccd7b82799e1c06782f6ffa7fbe0a62b37371ecaed6de6b2c2021
+n = 22 1
+before add round key 
+74d112fa5b41fca7ba5212d751d3c8d6
+round - 9
+d32af25c7076cbb9b6fcc4093affe8f7
+after shift d3ffc4b9702ae809b676f2f73afccb5c
+after sub a97d88dbd095c840790f0426a25559a7
+after round key 2bc47ef85c591ff85e96e5e6c5d7af58
+after mix ad572ab9f2d46eaac662f09fdea165ff
+round - 8
+ad572ab9f2d46eaac662f09fdea165ff
+after shift ada1f0aaf257659fc6d42affde626eb9
+after sub 18f1176204dabc6ec719957d9cab45db
+after round key 2eb894480aaf9df56c4ca305dcb052e4
+after mix eb21c545ce47d89ce76c3f325a747b8f
+round - 7
+eb21c545ce47d89ce76c3f325a747b8f
+after shift eb743f9cce217b32e747c58f5a6cd845
+after sub 3cca251cec7b03a1b016077346b82d68
+after round key a57e06dfd447a11015361090adf60c2f
+after mix a02e078b0ffe3eed8b18d3e33cc56dec
+round - 6
+a02e078b0ffe3eed8b18d3e33cc56dec
+after shift a0c5d3ed0f2e6de38bfe07ec3c183e8b
+after sub 4707a953fbc3b34dce0c38836d34d1ce
+after round key 01b6c3bf5a4b323f53108dd1235ae76a
+after mix 98b1d7353f8e6fc267ff8700f9eece2d
+round - 5
+98b1d7353f8e6fc267ff8700f9eece2d
+after shift 98ee87c23fb1ce00678ed72df9ff6f35
+after sub e299eaa82556ec520ae60dfa697d06d9
+after round key c4c4c222c26f07cc367239daba0f852f
+after mix 7ddca0e1c17ec8116a9a3067d067d179
+round - 4
+7ddca0e1c17ec8116a9a3067d067d179
+after shift 7d673011c1dcd1676a7ea079d09ac8e1
+after sub 130a08e3dd93510a588a47af6037b1e0
+after round key abfed6b61cf7921e832798118fd10636
+after mix 68137f31adc6ede1e2c4a3a812e647dd
+round - 3
+68137f31adc6ede1e2c4a3a812e647dd
+after shift 68e6a3e1ad1347a8e2c67fdd12c4ed31
+after sub f7f571e01882166f3bc76bc93988532e
+after round key f444eaad61120b2e210e77630dc33b46
+after mix f9841298e4002290c4abe4b00e5645ae
+round - 2
+f9841298e4002290c4abe4b00e5645ae
+after shift f956e490e48445b0c40012ae0eab2298
+after sub 69b9ae96ae4f68fc885239bed70e94e2
+after round key 7d9a10ead46eeef0eb0b3855f98ce020
+after mix f2bba5f1a0c8c905d8870ad81db87565
+round - 1
+f2bba5f1a0c8c905d8870ad81db87565
+after shift f2b80a05a0bb75d8d8c8a5651d87c9f1
+after sub 049aa33647fe3f2d2db129bcdeea122b
+after round key ab24b8a929fc075d34c9ae5b93316702
+after mix e007d4adbb38909cc33149b394f4f552
+plain text = 0x048d34a33f8454a4440ca6dfb38d64d6
+before add round key 
+6261eea7d57c30a048f7356c69e2c69d
+round - 9
+c59a0e01fe4b07be4459e3b202cee6bc
+after shift c5cee3befe9ae6b2444b0ebc02590701
+after sub 07ec4d5a0c37f53e86ccd7786a153809
+after round key 8555bb7980fb2286a15536b80d97cef6
+after mix 44a05ea8b5c0b218bf8ddc94c67f5a41
+round - 8
+44a05ea8b5c0b218bf8ddc94c67f5a41
+after shift 447fdc18b5a05a94bfc05e41c68db2a8
+after sub 866b9334d24746e7f41f9df8c7b43e6f
+after round key b022101edc32677c5f4aab8087af2950
+after mix 29a6aab9dda797185d43d5f5b686badb
+round - 7
+29a6aab9dda797185d43d5f5b686badb
+after shift 2986d518dda6baf55da7aadbb64397b9
+after sub 4cdcb534c9c5c0778d89629f796485db
+after round key d56896f7f1f962c628a9757c922aa49c
+after mix c5a3259f2093f0effad7ac09cd2fe082
+round - 6
+c5a3259f2093f0effad7ac09cd2fe082
+after shift c52facef20a3e009fa932582cdd7f09f
+after sub 074eaa615471a0401422c211800d176e
+after round key 41ffc08df5f92132893e7743ce6321ca
+after mix 3e7842f777b49d41deb43dd45e353d10
+round - 5
+3e7842f777b49d41deb43dd45e353d10
+after shift 3e353d4177783dd4deb442105eb49df7
+after sub d1d98bf802c18b199cc6f67c9dc67526
+after round key f784a372e5f86087a052c25c4eb4f6d0
+after mix 9ffa9453965ffccfed7057a611dd0a1a
+round - 4
+9ffa9453965ffccfed7057a611dd0a1a
+after shift 9fdd57cf96fa0aa6ed5f941a1170fc53
+after sub 6ec9da5f3514a3c55384e743e3d05550
+after round key d63d040af47060d1882938fd0c36e286
+after mix f21ff1f90764f9af4e1f360375eb27e7
+round - 3
+f21ff1f90764f9af4e1f360375eb27e7
+after shift f2eb36af071f27034e64f1e7751ff9f9
+after sub 043c241b38cb3dd5b68c2bb03fcb6969
+after round key 078dbf56415b2094ac45371a0b800101
+after mix 88fef6e34315659d817889b491149698
+round - 2
+88fef6e34315659d817889b491149698
+after shift 8814899d43fe96b48115f698917865e3
+after sub 979bf275640c35c6912fd6e2acc1bc4d
+after round key 83b84c091e2db3caf276d7098243c88f
+after mix 471a7457d697efe4c97458bff289af52
+round - 1
+471a7457d697efe4c97458bff289af52
+after shift 478958e4d61aafbfc9977452f274ef57
+after sub 16f25eae4a431bf41285ca4804ca61da
+after round key b94c4531244123840bfd4daf491114f3
+after mix 705495307a34e26e4b61251ba68e9e09
+plain text = 0x74d152fa7c41fcabbb5212d7917bc9c6
+before add round key 
+5d5e28882217dee8557c162dc8f42837
+round - 9
+faa5c82e0920e9f659d2c0f3a3d80816
+after shift fad8c0f609a508f35920c816a3d2e92e
+after sub 142d1fd64029bf7e1554b1ff717febc3
+after round key 9694e9f5cce568c632cd503f16fd1d3c
+after mix 9b1fd842ebbb5a8d387561bc37cfb381
+round - 8
+9b1fd842ebbb5a8d387561bc37cfb381
+after shift 9bcf618deb1fb3bc38bbd88137755a42
+after sub e85fd8b43ccb4b7876fe2d91b23f46f6
+after round key de165b9e32be6ae3ddab1be9f22451c9
+after mix 12ff8d6d674f3518cc0b195af75fc82e
+round - 7
+12ff8d6d674f3518cc0b195af75fc82e
+after shift 125f191867ffc85acc4f8d2ef70b356d
+after sub 39848e340a7db1462792b4c3269ed9b3
+after round key a030adf7324113f782b2a320cdd0f8f4
+after mix 6fe0eda8134807cb3ab2665dba89ad8f
+round - 6
+6fe0eda8134807cb3ab2665dba89ad8f
+after shift 6f8966cb13e0ad5d3a48ed8fbab207a8
+after sub 06f2d35982a0188da2d45373c03e386f
+after round key 4043b9b5232899ff3fc8e6218e500ecb
+after mix f82e1fc6c308a30528b6913fdc756ad8
+round - 5
+f82e1fc6c308a30528b6913fdc756ad8
+after shift f8759105c32e6a3f28081fd8dcb6a3c6
+after sub e13fac3633c35825eebfcb2d937971c7
+after round key c76284bcd4fab3bbd22bff0d400bf231
+after mix 98f9fa06027a2977dc53e7638cae359f
+round - 4
+98f9fa06027a2977dc53e7638cae359f
+after shift 98aee77702f93563dc7afa9f8c532906
+after sub e2beb0026a69d90093bd146ef0504ca5
+after round key 5a4a6e57ab0d1a144810cbd01fb6fb73
+after mix d00cb64391d86b8aaffdaabbd9277fa0
+round - 3
+d00cb64391d86b8aaffdaabbd9277fa0
+after shift d027aa8a910c7fbbafd8b6a0d9fd6b43
+after sub 603d62cfac816bfe1b2d7947e5210564
+after round key 638cf982d51176bf01e465edd16a6d0c
+after mix a006093b9934208073f1cd222ab7397e
+round - 2
+a006093b9934208073f1cd222ab7397e
+after shift a0b7cd80990639227334097e2af1203b
+after sub 4720803af9a55b948f28408a952b5449
+after round key 53033e468384dd98ec714161bba9208b
+after mix 2f0512108a2250ba6d73a102c32e3165
+round - 1
+2f0512108a2250ba6d73a102c32e3165
+after shift 2f2ea1ba8a0531026d221265c3735010
+after sub 4ec3f1c0cf362e6ab39439bc338f6c7c
+after round key e17dea5fa134161aaaecbe5b7e541955
+after mix 94bacdca47f5d9f2ba6ef384d6b17d7c
+plain text = 0x4361eebbd77c30a0b70d3f961ee617de
+before add round key 
+9169e32fbcbc0df18e4b421b197b17b0
+round - 9
+36920389978b3aef82e594c572573791
+after shift 365794ef979237c5828b039172e53a89
+after sub 24dae7618574b20711ced5ac1e2aa2f2
+after round key a663114209b865bf3657346c79a8540d
+after mix 9749175fc51b7fca169766ded04df6e3
+round - 8
+9749175fc51b7fca169766ded04df6e3
+after shift 974d66cac549f6de161b17e3d0977f5f
+after sub 8565d31007a4d69cff44874d60856b84
+after round key b32c503a09d1f7075411b135209e7cbb
+after mix 2b903977049baa1df44988f4b0491e9e
+round - 7
+2b903977049baa1df44988f4b0491e9e
+after shift 2b49881d04901ef4f49b399eb049aa77
+after sub 0ba497de3096e9babae85bdffca46202
+after round key 9210b41d08aa4b0b1fc84c3c17ea4345
+after mix 7d1f0d44f3726f0c15ce136fdf4b6609
+round - 6
+7d1f0d44f3726f0c15ce136fdf4b6609
+after shift 7d4b130cf31f666f15720d09dfce6f44
+after sub 13cc82817ecbd3062f1ef340efec0686
+after round key 557de86ddf435274b2024612a1823022
+after mix 75be89efe3a001f8b14f968c37e9c42b
+round - 5
+75be89efe3a001f8b14f968c37e9c42b
+after shift 75e996f8e3bec48cb1a0892b374f01ef
+after sub 3feb35e14d5a88f05647f20bb2920961
+after round key 19b61d6baa63636e6ad3c62b61e08a97
+after mix 07e9aa9d94e9ce7747f643a6e9e321b7
+round - 4
+07e9aa9d94e9ce7747f643a6e9e321b7
+after shift 07e3437794e921a647e9aab7e9f6ce9d
+after sub 384d6402e7eb7bc516eb6220ebd6ec75
+after round key 80b9ba57268fb8d1cd46bd9e04305ba3
+after mix 3404bd59bb18bedd8479bfeafd6a217a
+round - 3
+3404bd59bb18bedd8479bfeafd6a217a
+after shift 346abfddbb0421ea8418bd7afd79be59
+after sub 2858f4c9fe307bbb4f34cdbd21af5a15
+after round key 2be96f8487a066fa55fdd11715e4327d
+after mix c52bd3147450f8670b135325493809c6
+round - 2
+c52bd3147450f8670b135325493809c6
+after shift c5385367742b09250b50d3c64913f814
+after sub 0776500aca0b40c29e6ca9c7a482e19b
+after round key 1355ee76b02ac6cefd35a82c8a009559
+after mix 32c06844323a7be1236aeeebb90e2adb
+round - 1
+32c06844323a7be1236aeeebb90e2adb
+after shift 320eeee132c02aeb233a68dbb96a7b44
+after sub a1d799e0a11f953c32a2f79fdb580386
+after round key 0e69827fcf1dad4c2bda7078968376af
+after mix e0da43e3538957bed55b6710e734849b
+plain text = 0x041f9ae591c66c93c288db7fe4f42883
+before add round key 
+eea6b28591766005f41797db4894a3db
+round - 9
+495d5223ba41571bf8b9410523b883fa
+after shift 49b8411bba5d8305f84152fa23b95723
+after sub a49af844c08d4136e1f8481432dbda32
+after round key 26230e674c41968ec661a9d455592ccd
+after mix ad535dcfae585ebd6458a4427611ce44
+round - 8
+ad535dcfae585ebd6458a4427611ce44
+after shift ad11a4bdae53ce4264585d4476585ecf
+after sub 18e31dcdbe50ecf68c5e8d860f5e9d5f
+after round key 2eaa9ee7b025cd6d270bbbfe4f458a60
+after mix 9fb9ce15e853ff7135857ba2c3f5dd0b
+round - 7
+9fb9ce15e853ff7135857ba2c3f5dd0b
+after shift 9ff57b71e8b9dda23553ce0bc385ff15
+after sub 6e77032cc8dbc91ad950ec9e33677d2f
+after round key f7c320eff0e76bab7c70fb7dd8295c68
+after mix 8cccb60db1fa9f03f8ff70fdb06ba5bb
+round - 6
+8cccb60db1fa9f03f8ff70fdb06ba5bb
+after shift 8c6b7003b1cca5fdf8fab6bbb0ff9f0d
+after sub f005d0d556272921e11479fefc7d6ef3
+after round key b6b4ba39f7afa8537c08ccacb2135857
+after mix 674f72dbecb0ee11d6894e05c7276a24
+round - 5
+674f72dbecb0ee11d6894e05c7276a24
+after shift 67274e11ec4f6a05d6b07224c789eedb
+after sub 0a3db6e3839258364afc1ea631f2999f
+after round key 2c609e6964abb3a876682a86e2801a69
+after mix 5eb781d3beb9da09742c57bd72bfa874
+round - 4
+5eb781d3beb9da09742c57bd72bfa874
+after shift 5ebf5709beb7a8bd74b98174722cdad3
+after sub 9df4da405a206fcdcadb91ca1e427aa9
+after round key 250004159b44acd911764e74f1a4cd7f
+after mix 64d32dae6f4017923b8dde3535a9dca7
+round - 3
+64d32dae6f4017923b8dde3535a9dca7
+after shift 64a9de926fd3dc353b402da7358d17ae
+after sub 8cb79c7406a993d94972fa89d9b487be
+after round key 8f0607397f398e9853bbe623edffefd6
+after mix e88015cafc18ad192409cbcba913fd6c
+round - 2
+e88015cafc18ad192409cbcba913fd6c
+after shift e813cb19fc80fdcb2418156ca909adca
+after sub c882598e553a2159a6342fb8b7401810
+after round key dca1e7f22f1ba755c56d2e5399c26cd2
+after mix cf7f24fcfdf7e22e283472bb5a497e88
+round - 1
+cf7f24fcfdf7e22e283472bb5a497e88
+after shift cf49722efd7f7ebb28f724885a34e2fc
+after sub 5fa41ec3216b8afeee26a69746283b55
+after round key f01a055c4f69b28ef75e21700bf34e7c
+after mix 9a7b124010bfd96cb2618fa42f58e558
+plain text = 0x9369e307bdbf09f2498e86c91a7b17bc
+before add round key 
+342db4fa8940ca0d950503b3a91e8117
+round - 9
+93d6545ca277fd1399abd56dc232a136
+after shift 9332d513a2d6a16d99775436c2abfd5c
+after sub 22a1b5821a4af1b3f902fd24a80e21a7
+after round key a01843a19686260bde9b1ce4cf8cd758
+after mix d6c081cd8e1144e6534bf055dfb144e6
+round - 8
+d6c081cd8e1144e6534bf055dfb144e6
+after shift d6b1f0e68ec04455531181e6df4b44cd
+after sub 4a5617f5e61f86ed50e391f5efcc8680
+after round key 7c1f94dfe86aa776fbb6a78dafd791bf
+after mix 444cfcdc2d66c4dc780aeaff7730e5f4
+round - 7
+444cfcdc2d66c4dc780aeaff7730e5f4
+after shift 4430eadc2d4ce5ff7866fcf4770ac4dc
+after sub 8608bb93fa5d2a7dc1d355ba02a38893
+after round key 1fbc9850c26188cc64f34259e9eda9d4
+after mix 7677274d32b4adcc49946c3d661dd4d6
+round - 6
+7677274d32b4adcc49946c3d661dd4d6
+after shift 761d6ccc3277d43d49b427d66694ad4d
+after sub 0fdeb827a102198ba4c63d4ad3e71865
+after round key 496fd2cb008a98f939da88189d892ec1
+after mix 837466aeab8bfe35d09d87b92d857320
+round - 5
+837466aeab8bfe35d09d87b92d857320
+after shift 83858735ab7473b9d08b66202d9dfeae
+after sub 4167ead90eca8fdb60ced354fa750cbe
+after round key 673ac253e9f364455c5ae77429078f48
+after mix 8998af7227d0dc10dbd251cd3bcb544d
+round - 4
+8998af7227d0dc10dbd251cd3bcb544d
+after shift 89cb5110279854cddbd0af4d3bd2dc72
+after sub f259707c3de2fd809f601b65497f931e
+after round key 4aadae29fc863e9444cdc4dba69924c8
+after mix 6fc04b8427af5e0631cd86ecf7b6c85a
+round - 3
+6fc04b8427af5e0631cd86ecf7b6c85a
+after shift 6fb6860627c0c8ec31af4b5af7cd5e84
+after sub 0679dca53d1fb1832e1bcc4626809d4f
+after round key 05c847e8448facc234d2d0ec12cbf527
+after mix c8124ef6be1c07000e7e45ef5979a883
+round - 2
+c8124ef6be1c07000e7e45ef5979a883
+after shift c8794500be12a8ef0e1c4e83597e07f6
+after sub b1af68525a396f61d7c4b641158a38d6
+after round key a58cd62e2018e96db49db7aa3b084c14
+after mix 2385e99e7205d813659a0ec584ee2524
+round - 1
+2385e99e7205d813659a0ec584ee2524
+after shift 23ee0e13728525c56505e924849ad89e
+after sub 3299d7821e67c207bc36eba64f372ddf
+after round key 9d27cc1d7065fa77a54e6c4102ec58f6
+after mix b31c34f0703cd105cd9a9302c0811a1b
+plain text = 0xefa6b28911786085f71797d34b94a3d9
+before add round key 
+0915d6070f87c7532d05efc9317a5104
+round - 9
+aeee36a124b0f04d21ab39175a567125
+after shift ae56394d24ee711721b036255aabf0a1
+after sub beb95b65a6992c877bfc24c2460e17f1
+after round key 3c00ad462a55fb3f5c65c502218ce10e
+after mix 03772784a9b515b233f64d76290c6d0a
+round - 8
+03772784a9b515b233f64d76290c6d0a
+after shift 030c4db2a9776d7633b5270a29f61584
+after sub d581653eb702b30f66d23da34cd62f4f
+after round key e3c8e614b9779294cd870bdb0ccd3870
+after mix ea8246f740d5e0bd4ac9a3bae853d5e7
+round - 7
+ea8246f740d5e0bd4ac9a3bae853d5e7
+after shift ea53a3bd4082d5ba4ad546e7e8c9e0f7
+after sub bb5071cd7211b5c05cb598b0c812a026
+after round key 22e4520e4a2d1771f9958f53235c8161
+after mix 483017f5e23bbd65a5d3a86e6802ef1a
+round - 6
+483017f5e23bbd65a5d3a86e6802ef1a
+after shift 4802a865e230ef6ea53b171a68d3bdf5
+after sub d46a6fbc3b08614529498743f7a9cd77
+after round key 92db05509a80e037b4553211b9c7fbd3
+after mix 969a3929a2555963cb18d2c3863f6887
+round - 5
+969a3929a2555963cb18d2c3863f6887
+after shift 963fd263a29a68c3cb55398786185929
+after sub 35257f001a37f73359ed5beadc34154c
+after round key 1378578afd0e1cad65796fca0f4696ba
+after mix bfb28c37cdf4a8d373a91073af40fc76
+round - 4
+bfb28c37cdf4a8d373a91073af40fc76
+after shift bf4010d3cdb2fc7373f48c76afa9a837
+after sub f4727ca9803e558f8fbaf00f1bb76fb2
+after round key 4c86a2fc415a969b54172fb1f451d864
+after mix 0e65d32ca0565bbb4aa690a1c45dda5a
+round - 3
+0e65d32ca0565bbb4aa690a1c45dda5a
+after shift 0e5d90bba065daa14a56d35ac4a65b2c
+after sub d78d96fe47bc7af15cb9a94688c55742
+after round key d43c0db33e2c67b04670b5ecbc8e3f2a
+after mix 8684f3a7d24b1a46f19ddcdfe6552bbf
+round - 2
+8684f3a7d24b1a46f19ddcdfe6552bbf
+after shift 8655dc46d2842bdff14bf3bfe69d1aa7
+after sub dced93987f4f0bef2bcc7ef4f5754389
+after round key c8ce2de4056e8de348957f1fdbf7374b
+after mix 9056f0f9e89c6a1b1766418df84cb450
+round - 1
+9056f0f9e89c6a1b1766418df84cb450
+after shift 904c411be856b48d179cf050f8666af9
+after sub 965df844c8b9c6b4871c176ce1d35869
+after round key 39e3e3dba6bbfec49e64908bac082d40
+after mix 60b06557e3d2f5e3e1ae369816a21e63
+plain text = 0x342db4f28c40ca0d97050397ab1d8514
+before add round key 
+a4a803398640775ab2ab82e92b52ebc2
+round - 9
+0353e39fad774044be055437407ecbe3
+after shift 037e5444ad53cb37be77e3e34005409f
+after sub d58afd86185059b25a024d4d7236726e
+after round key 57330ba5949c8e0a7d9bac8d15b48491
+after mix 34ede7f46c5675c36608228b5d23bf75
+round - 8
+34ede7f46c5675c36608228b5d23bf75
+after shift 342322c36cedbf8b6656e7755d0875f4
+after sub 28329433b853f4ced3b9b03f8dbf3fba
+after round key 1e7b1719b626d55578ec8647cda42885
+after mix ee2e319a8a9cc9cf55690168189d6e2f
+round - 7
+ee2e319a8a9cc9cf55690168189d6e2f
+after shift ee9d01cf8a2e6e68559c312f1869c99a
+after sub 9975095fcfc345f7ed1c2e4e34e41237
+after round key 00c12a9cf7ffe746483c39addfaa3370
+after mix d3811732318b687bdee574af355bb5ed
+round - 6
+d3811732318b687bdee574af355bb5ed
+after shift d35b747b3181b5afde8b17ed35e56832
+after sub a957ca032e91d21b9cce8753d92af7a1
+after round key efe6a0ef8f19536901d232019744c105
+after mix 9a0e598b5eedc1ded1c939c1c6e5be8a
+round - 5
+9a0e598b5eedc1ded1c939c1c6e5be8a
+after shift 9ae539de5e0ebec1d1ed598ac6c9c18b
+after sub 372a5b9c9dd75add515315cfc712ddce
+after round key 117773167aeeb1436dc721ef14605e38
+after mix 55fb319c33a934c860d9e4394de52399
+round - 4
+55fb319c33a934c860d9e4394de52399
+after shift 55e5e4c833fb233960a931994dd9349c
+after sub ed2aaeb16663325b90b72ef965e5281c
+after round key 55de70e4a707f14f4b1af1478a039fca
+after mix 2b96309251253b51a926c6aeb14f0725
+round - 3
+2b96309251253b51a926c6aeb14f0725
+after shift 2b4fc651519607aea9253025b1263b92
+after sub 0b92c770703538beb7c208c256234974
+after round key 08235c3d09a525ffad0b14686268211c
+after mix 3989f9031126d19078f26e3ef5a5d8bf
+round - 2
+3989f9031126d19078f26e3ef5a5d8bf
+after shift 39a56e901189d83e7826f9bff5f2d103
+after sub 5b294596e3f22dd1c12369f4770451d5
+after round key 4f0afbea99d3abdda27a681f59862517
+after mix e19cfdd402dc48aaac712351d36d6e3d
+round - 1
+e19cfdd402dc48aaac712351d36d6e3d
+after shift e16d23aa029c6e51acdcfd3dd37148d4
+after sub e0b332626a1c4570aa93218ba92cd419
+after round key 4f0d29fd041e7d00b3eba66ce4f7a130
+after mix 02e25325bdd20a023935138d3394694c
+plain text = 0xced012d50c87c75b2c05efca327a510c
+before add round key 
+71245ff1802017ef224da6aad0d58eb1
+round - 9
+d6dfbf57ab1720f12ee37074bbf9ae90
+after shift d6f970f1abdfae742e17bf90bbe32057
+after sub 4a69d02b0eefbecac387f496fe4d54da
+after round key c8d0260882236972e41e155699cfa225
+after mix f0f7724347f5c3cbe4357c14da9358c0
+round - 8
+f0f7724347f5c3cbe4357c14da9358c0
+after shift f0937ccb47f75814e4f572c0da35c343
+after sub 1722015916265e9bae771e1f7ad93364
+after round key 216b827318537f00052228673ac2245b
+after mix 1bd6d5a386d389e8fa3c07a97a947118
+round - 7
+1bd6d5a386d389e8fa3c07a97a947118
+after shift 1b9407e886d671a9fad3d5187a3c89a3
+after sub 44e738c8dc4a2cb714a9b534bd6df271
+after round key dd531b0be4768e06b189a2d75623d336
+after mix edba0cc5a28cfcc89eaf176be2f05cde
+round - 6
+edba0cc5a28cfcc89eaf176be2f05cde
+after shift edf017c8a2ba5c6b9e8c0cdee2affcc5
+after sub 531787b11ac0a705dff0819c3b1b5507
+after round key 15a6ed5dbb48267742ec34ce757563a3
+after mix beea4017c1ad03cd040dda87b7b63afb
+round - 5
+beea4017c1ad03cd040dda87b7b63afb
+after shift beb6dacdc1ea3a8704ad40fbb70d0317
+after sub 5a797a80ddbba2ea3018726320f3d587
+after round key 7c24520a3a8249740c8c4643f3815671
+after mix 74705a5e473b25dce5d3be0d7e127148
+round - 4
+74705a5e473b25dce5d3be0d7e127148
+after shift 7412bedc4770710de53b5a487ed3255e
+after sub ca395a9316d02cf32a4946d48aa9c29d
+after round key 72cd84c6d7b4efe7f1e4996a654f754b
+after mix b627a1cdef4b01cef78748dec59ffdb3
+round - 3
+b627a1cdef4b01cef78748dec59ffdb3
+after shift b69f48ceef27fddef74ba1b3c58701cd
+after sub 796ed4ec613d219c26ccf14b07ea0980
+after round key 7adf4fa118ad3cdd3c05ede133a161e8
+after mix da2279ca3b8db755a1f51a7b9cc6f8b9
+round - 2
+da2279ca3b8db755a1f51a7b9cc6f8b9
+after shift dac61a553b22f87ba18d79b99cf5b7ca
+after sub 7ac743ed4994e103f1b4afdb1c772010
+after round key 6ee4fd9133b5670f92edae3032f554d2
+after mix 8c8ec82cb00b2376349ad19e5b4fbfea
+round - 1
+8c8ec82cb00b2376349ad19e5b4fbfea
+after shift 8c4fd176b08ebf9e340bc8ea5b9a232c
+after sub f092510ffce6f4df289eb1bb57373242
+after round key 5f2c4a9092e4ccaf31e6365c1aec476b
+after mix 7bb02745a03ed45fbaa1dc7ad2db20f3
+plain text = 0xa7a8033b86407752b7ab82e92b52eba6
+before add round key 
+0c77a80f069ffa4f7e66cc0e6ba71249
+round - 9
+ab8c48a92da8cd5172c81ad0008b3268
+after shift ab8b1a512d8c32d072a8486800c8cda9
+after sub 0ece4370faf0a1601e6fd4f752b180b7
+after round key 8c77b553763c76d839f6353735337648
+after mix 708d73936790b4a773bdfefdcdadfea6
+round - 8
+708d73936790b4a773bdfefdcdadfea6
+after shift 70adfea7678dfefd739073a6cdbdb493
+after sub d0180c890ab40c218f968fc580cdc622
+after round key e6518fa304c12dba24c3b9bdc0d6d11d
+after mix 033c47e3c50148de096e49cdf88946ed
+round - 7
+033c47e3c50148de096e49cdf88946ed
+after shift 038949dec53c46cd090147edf86e48e3
+after sub d5f2a49c076d988040091653e145d44d
+after round key 4c46875f3f513a31e52901b00a0bf50a
+after mix 41a33505977c58d663937df096a78e41
+round - 6
+41a33505977c58d663937df096a78e41
+after shift 41a77dd697a38ef0637c354196935805
+after sub f889134a8571e6170001d9f835225e36
+after round key be3879a624f967659d1d6caa7b4c6892
+after mix 3f534a7fefe509dc2f55526ea6ae34f1
+round - 5
+3f534a7fefe509dc2f55526ea6ae34f1
+after shift 3fae52dcef53346e2fe54af1a655097f
+after sub 25be4893615028454e2a5c2bc5ed406b
+after round key 03e360198669c3db72be680b169fc39d
+after mix 720638d542d6f291394b66bb531a33ad
+round - 4
+720638d542d6f291394b66bb531a33ad
+after shift 721a6691420633bb39d638ad534bf2d5
+after sub 1e43d3acf6a566fe5b4a761850cc04b5
+after round key a6b70df937c1a5ea80e7a9a6bf2ab363
+after mix 9277e8e8b8a343e1ef6116f0e56763a4
+round - 3
+9277e8e8b8a343e1ef6116f0e56763a4
+after shift 926716e1b87763f0efa3e8a4e56143e8
+after sub 740affe09a0200176171c81d2ad864c8
+after round key 77bb64ade3921d567bb8d4b71e930ca0
+after mix 956b8c77255bafebbb8b4fdf65483539
+round - 2
+956b8c77255bafebbb8b4fdf65483539
+after shift 95484feb256b35dfbb5b8c39658baf77
+after sub add4923cc205d9effe57f05bbcce1b02
+after round key b9f72c40b8245fe39d0ef1b0924c6fc0
+after mix 6e99bf6a11d8b65f133dc03c38d827b6
+round - 1
+6e99bf6a11d8b65f133dc03c38d827b6
+after shift 6ed8c05f1199273c13d8bfb6383db66a
+after sub 452d1f84e3f93d6d822df479768b7958
+after round key ea93041b8dfb051d9b55739e3b500c71
+after mix f6cbd48f449a10a0b1381fb597ca8cc7
+plain text = 0x72275bf847e5d33d214da6a6d1d58ebd
+before add round key 
+20ecba7fb2cbac8d8568df31e4976b93
+round - 9
+87175ad999fc9b9389c609ef8fbb4bb2
+after shift 87bb099399174bef89fc5ab28fc69bd9
+after sub eafe4022f987cc61f255463e73c7e8e5
+after round key 6847b601754b1bd9d5cca7fe14451e1a
+after mix 5789a2e4f7c87ab942a4b016555ff5aa
+round - 8
+5789a2e4f7c87ab942a4b016555ff5aa
+after shift 575fb0b9f789f51642c8a2aa55a47ae4
+after sub da84fcdb26f277fff6b11a62ed1dbdae
+after round key eccd7ff1288756645de42c1aad06aa91
+after mix 74e2a29b9786c844702104da8053bcff
+round - 7
+74e2a29b9786c844702104da8053bcff
+after shift 7453044497e2bcda7086a2ff8021c89b
+after sub ca503086853b787ad0dc1a7d3a7bb1e8
+after round key 53e41345bd07dacb75fc0d9ed13590af
+after mix 950b0c73d13ffbbe4d5c010a4463a854
+round - 6
+950b0c73d13ffbbe4d5c010a4463a854
+after shift 956301bed10ba80a4d3f0c54445cfb73
+after sub ad00095a519e6fa3652581fd86a7638f
+after round key ebb163b6f016eed1f83934afc8c9552b
+after mix d2895f8b1487a3e9c0f1b8d322e541f9
+round - 5
+d2895f8b1487a3e9c0f1b8d322e541f9
+after shift d2e5b8e9148941d3c0875ff922f1a38b
+after sub 7f2a9aeb9bf2f8a91fea8469942b71ce
+after round key 5977b2617ccb1337237eb0494759f238
+after mix d0eada1dc9da9b1b10d6d0b2b7a5b177
+round - 4
+d0eada1dc9da9b1b10d6d0b2b7a5b177
+after shift d0a5d01bc9eab1b210dada77b7d69b1d
+after sub 6029604412bb563e7c7a7a02204ae8de
+after round key d8ddbe11d3df952aa7d7a5bccfac5f08
+after mix dc8bf50894eeaf6643889331f07808b4
+round - 3
+dc8bf50894eeaf6643889331f07808b4
+after shift dc789366948b083143eef5b4f088af08
+after sub 93c122d3e7cebf2e649977c617971bbf
+after round key 9070b99e9e5ea26f7e506b6c23dc73d7
+after mix 4ac9f6b2901cb6370cac4bc22800cebd
+round - 2
+4ac9f6b2901cb6370cac4bc22800cebd
+after shift 4a004b3790c9cec20c1cf6bd28acb6b2
+after sub 5c52ccb29612eca881c4d6cdeeaa793e
+after round key 487172ceec336aa4e29dd726c0280dfc
+after mix 137c38d2fe725ac75a4168fdc3ce3c28
+round - 1
+137c38d2fe725ac75a4168fdc3ce3c28
+after shift 13ce68c7fe7c3cfd5a723828c3415ad2
+after sub 82ecf7310c016d21461e76ee33f8467f
+after round key 2d52ecae620355515f66f1097e233356
+after mix 34268fa01c9ce10430670791082f352a
+plain text = 0x8c79a88f059ffa437f66cc02eba91289
+before add round key 
+e4fa4171fa481d56e3184014299ba94e
+round - 9
+4301a1d7d17f2a48efb696ca42b7896f
+after shift 43b79648d10189caef7fa16f42b62ad7
+after sub 642035d45109f210616bf106f679950d
+after round key e699c3f7ddc525a846f210c691fb63f2
+after mix a9ab1a5371e0b8bc29a2bb52c296dd72
+round - 8
+a9ab1a5371e0b8bc29a2bb52c296dd72
+after shift a996bbbc71abdd5229e01a72c2a2b853
+after sub b735fe782c0ec9484ca0431ea81a9a50
+after round key 817c7d52227be8d3e7f57566e8018d6f
+after mix a5dee64fca8fc4e3b49d240cfdf28e8a
+round - 7
+a5dee64fca8fc4e3b49d240cfdf28e8a
+after shift a5f224e3cade8e0cb48fe68afd9dc44f
+after sub 2904a64d109ce681c673f5cf21758892
+after round key b0b0858e28a044306353e22cca3ba9d5
+after mix 37711459d5585a2b7e82181a2d184ff7
+round - 6
+37711459d5585a2b7e82181a2d184ff7
+after shift 3718182bd5714f1a7e5814f72d825a59
+after sub b234340bb52c92438a5e9b26fa114615
+after round key f4855ee714a4133117422e74b47f70b1
+after mix 5a697b801ddd25772e35091d5e2e8ef4
+round - 5
+5a697b801ddd25772e35091d5e2e8ef4
+after shift 5a2e09771d698e1d2edd7bf45e352580
+after sub 46c34002dee4e6dec3c903ba9dd9c23a
+after round key 609e688839dd0d40ff5d379a4eab41cc
+after mix 49df7df5acb2d166dacf0c16a6e67951
+round - 4
+49df7df5acb2d166dacf0c16a6e67951
+after shift 49e60c66acdf7916dab27d51a6cfd1f5
+after sub a4f581d3aaefafff7a3e1370c55f5177
+after round key 1c015f866b8b6ceba193ccce2ab9e6a1
+after mix 8f295f3ddeb71719c1e9ccd424495be2
+round - 3
+8f295f3ddeb71719c1e9ccd424495be2
+after shift 8f49cc19de295bd4c1b75fe224e9173d
+after sub 73a4278e9c4c5719dd20843ba6eb878b
+after round key 7015bcc3e5dc4a58c7e9989192a0efe3
+after mix 6de3950175a58c77f8f4e9c2ccfccdc3
+round - 2
+6de3950175a58c77f8f4e9c2ccfccdc3
+after shift 6dfce97775e3cdc2f8a595c3ccf48c01
+after sub b355eb023f4d80a8e129ad3327baf009
+after round key a776557e456c06a48270acd8093884cb
+after mix 907b8d9cbf0af1cf1f9f2620ca19bb16
+round - 1
+907b8d9cbf0af1cf1f9f2620ca19bb16
+after shift 901926cfbf7bbb201f0a8d16ca9ff19c
+after sub 968e235ff403fe54cba3b4ff106e2b1c
+after round key 393038c09a01c624d2db33185db55e35
+after mix 17f5effc409cee4b4018e59f6db97324
+plain text = 0x23ecba73b3cbac810566de31e7976b9b
+before add round key 
+39687455805354e2176f1ad0526efe7d
+round - 9
+9e9394f3ab6463fc1bc1cc0e3942de5c
+after shift 9e42ccfcab93de0e1b64945c39c163f3
+after sub dff627550e229cd7448ce7a75bdd007e
+after round key 5d4fd17682ee4b6f631506673c5ff681
+after mix 15e6e8ae6db334a2af4fe4134bf7a901
+round - 8
+15e6e8ae6db334a2af4fe4134bf7a901
+after shift 15f7e4a26de6a913afb3e8014b4f34ae
+after sub 2f26ae1ab3f5b7821b4bc809cc9228be
+after round key 196f2d30bd809619b01efe718c893f81
+after mix 3b92d91b3eab6a4de650ea7d68cab6af
+round - 7
+3b92d91b3eab6a4de650ea7d68cab6af
+after shift 3bcaea4d3e92b67de6abd9af68506a1b
+after sub 4910bb65d1747913f50ee51bf76c5844
+after round key d0a498a6e948dba2502ef2f81c227903
+after mix 2ff8f36e3ab2a3f3eb01a13fbd4250eb
+round - 6
+2ff8f36e3ab2a3f3eb01a13fbd4250eb
+after shift 2f42a1f33af8503febb2f3ebbd01a36e
+after sub 4ef6f17ea2e16c253c3e7e3ccd097145
+after round key 08479b920369ed57a122cb6e836747e1
+after mix acddb38448881d0d02cd24cd096d496f
+round - 5
+acddb38448881d0d02cd24cd096d496f
+after shift ac6d240d48dd49cd0288b36f09cd1d84
+after sub aab3a6f3d4c9a4806a974b064080de4f
+after round key 8cee8e7933f04f1e56037f2693f25db9
+after mix 111522b32b6e68bf3403053e85415a1b
+round - 4
+111522b32b6e68bf3403053e85415a1b
+after shift 114105bf2b155a3e346e221b850368b3
+after sub e3f836f40b2f46d12845944467d5f74b
+after round key 5b0ce8a1ca4b85c5f3e84bfa8833409d
+after mix e1b36e226751b1469e70692d93209742
+round - 3
+e1b36e226751b1469e70692d93209742
+after shift e120694667b3972d9e516e429370b122
+after sub e054e4980a4b85fadf7045f622d05694
+after round key e3e57fd573db98bbc5b9595c169b3efc
+after mix 12b1cdc20679e014e7478950b64c00b5
+round - 2
+12b1cdc20679e014e7478950b64c00b5
+after shift 124c891406b10050e779cdb5b647e0c2
+after sub 395df29ba556526cb0af80d27916a0a8
+after round key 2d7e4ce7df77d460d3f681395794d46a
+after mix 6d31e743448a77a5d310a0fe4879317d
+round - 1
+6d31e743448a77a5d310a0fe4879317d
+after shift 6d79a0a5443131fed38ae77d48107743
+after sub b3af4729862e2e0ca9cfb013d47c0264
+after round key 1c115cb6e82c167cb0b737f499a7774d
+after mix 83bf16cd07aabebd2a053ed554bdb25f
+plain text = 0xe5fa4172f9481d5ae2184013a995a84e
+before add round key 
+3ada9369b1ace4cd31170d6b608eef28
+round - 9
+9d2173cf9a9bd3d33db9dbb50ba2cf09
+after shift 9da2dbd39a21cfb53d9b73090bb9d3cf
+after sub 751a9fa9377b5fd28be88f409edba95f
+after round key f7a3698abbb7886aac716e80f9595fa0
+after mix 69f082acb04f445598163c819d0d854a
+round - 8
+69f082acb04f445598163c819d0d854a
+after shift 690d3c55b0f08581984f824a9d1644ac
+after sub e4f36dedfc176791e292115c75ff86aa
+after round key d2baeec7f262460a49c7272435e49195
+after mix 8d82337d49f75e3c64340bd60df61836
+round - 7
+8d82337d49f75e3c64340bd60df61836
+after shift 8df60b3c498218d664f733360d345e7d
+after sub b4d69e6da411344a8c266624f3289d13
+after round key 2d62bdae9c2d96fb290671c71866bc54
+after mix 4f506724ab53022631fc4014084b9b4e
+round - 6
+4f506724ab53022631fc4014084b9b4e
+after shift 4f4b4026ab509b143153674e08fc0224
+after sub 92cc72230e6ce89b2e500ab6bf556aa6
+after round key d47d18cfafe469e9b34cbfe4f13b5c02
+after mix 23ea13a4c5188e9895d4ca2fa4493a43
+round - 5
+23ea13a4c5188e9895d4ca2fa4493a43
+after shift 2349ca98c5ea3a2f95181343a4d48ea4
+after sub 32a410e207bba24ead3482641d19e61d
+after round key 14f93868e08249d091a0b644ce6b65eb
+after mix 47300ac0d43e9081eeb054c96d2990ff
+round - 4
+47300ac0d43e9081eeb054c96d2990ff
+after shift 47295481d43090c9ee3e0aff6db090c0
+after sub 164cfd911908961299d1a37db3fc961f
+after round key aeb823c4d86c5506427c7cc35c1a21c9
+after mix b846ccc337336f8c235304f596a4ac30
+round - 3
+b846ccc337336f8c235304f596a4ac30
+after shift b8a4048c3746acf52333cc3096536fc3
+after sub 9a1d30f0b298aa773266270835500633
+after round key 99acabbdcb08b73628af3ba2011b6e5b
+after mix 1bc66f91d9f1214b9f46b077dea6efb8
+round - 2
+1bc66f91d9f1214b9f46b077dea6efb8
+after shift 1ba6b04bd9c6ef779ff16fb8de462191
+after sub 44c5fccce5c761026e2b069a9c987bac
+after round key 50e642b09fe6e70e0d720771b21a0f6e
+after mix 3da4a77aea15a9c69ad582c4e020d4dd
+round - 1
+3da4a77aea15a9c69ad582c4e020d4dd
+after shift 3d2082c6eaa4d4c49a15a7dde0d5a97a
+after sub 8b5411c7bb1d1988372f89c9a0b5b7bd
+after round key 24ea0a58d51f21f82e570e2eed6ec294
+after mix 0bdf064e2c59fe98fbbd69766bcff584
+plain text = 0x3a68745d835354e0146f1ad8516efe78
+before add round key 
+b1dae55342995239307944ca09b953fd
+round - 9
+162105f569ae65273cd79214629573dc
+after shift 16959227692173143cae05dc62d765f5
+after sub ffad743de47b8f9b6dbe3693ab0dbc77
+after round key 7d14821e68b758234a27d753cc8f4a88
+after mix 62176cecfee79d2032f7664a81e71ef9
+round - 8
+62176cecfee79d2032f7664a81e71ef9
+after shift 62e76620fe171e4a32e76cf981f79dec
+after sub abb0d3540c87e95ca1b0b86991267583
+after round key 9df9507e02f2c8c70ae58e11d13d62bc
+after mix 60b639a5ba1495c434135007510886ed
+round - 7
+60b639a5ba1495c434135007510886ed
+after shift 600850c4bab68607341439ed511395a5
+after sub 90bf6c88c079dc38289b5b537082ad29
+after round key 090b4f4bf8457e898dbb4cb09bcc8c6e
+after mix 38ae72e29b02895a08a246260398654b
+round - 6
+38ae72e29b02895a08a246260398654b
+after shift 3898465a9bae65260802724b03a289e2
+after sub 76e29846e8bebc23bf6a1eccd51af23b
+after round key 3053f2aa49363d512276ab9e9b74c49f
+after mix 2b3b9fb4f72ca56ddc1e97345aed7675
+round - 5
+2b3b9fb4f72ca56ddc1e97345aed7675
+after shift 2bed976df73b7634dc2c9f755a1ea5b4
+after sub 0b5385b326490f2893426e3f46e929c6
+after round key 2d0ead39c170e4b6afd65a1f959baa30
+after mix 25f7d0b596cc6ed7631beeaa2d3b21a3
+round - 4
+25f7d0b596cc6ed7631beeaa2d3b21a3
+after shift 253beed796f721aa63ccd0a32d1b6eb5
+after sub c249990d35267b6200276071fa4445d2
+after round key 7abd4758f442b876db8abfcf15a2f204
+after mix 59a9cfe73de8812cc0dde6daaed3cbf7
+round - 3
+59a9cfe73de8812cc0dde6daaed3cbf7
+after shift 59d3e62c3da9cbdac0e8cff7aedd81e7
+after sub 15a9f5428bb7597a1fc85f26bec991b0
+after round key 16186e0ff227443b0501438c8a82f9d8
+after mix cb926d5b201cd94fc74e0c4e377d1675
+round - 2
+cb926d5b201cd94fc74e0c4e377d1675
+after shift cb7d0c4f2092164ec71c6d75374ed95b
+after sub 591381925474ffb631c4b33fb2b6e557
+after round key 4d303fee2e5579ba529db2d49c349195
+after mix dfc0ee5d9093ac17ec6a456a586c168e
+round - 1
+dfc0ee5d9093ac17ec6a456a586c168e
+after shift df6c451790c0166aec93ee8e586aac5d
+after sub efb86887961fff58832299e65e58aa8d
+after round key 40067318f81dc7289a5a1e011383dfa4
+after mix 5eca378e8f3ca41d5ad87b26c755c6bf
+plain text = 0x39da9361b2ace4cc31170d63658eef28
+before add round key 
+1cefec3dd1865a2a365d469609baa37d
+round - 9
+bb140c9bfab16d343af390486296835c
+after shift bb969034fa1483483ab10c5c62f36d9b
+after sub fe359628149b41d4a25681a7ab7eb3e8
+after round key 7c8c600b9857966c85cf6067ccfc4517
+after mix d84ae9e0a3a4c7f5bb0fc43de14bac64
+round - 8
+d84ae9e0a3a4c7f5bb0fc43de14bac64
+after shift d84bc4f5a34aac3dbba4e964e10fc7e0
+after sub 2dcc8877715caa8bfe1deb8ce0fb31a0
+after round key 1b850b5d7f298b105548ddf4a0e0269f
+after mix ae1d354ed16da4d5f63016e47ee01176
+round - 7
+ae1d354ed16da4d5f63016e47ee01176
+after shift aee016d5d11d11e4f66d35767e30a44e
+after sub bea0ffb551dee3aed6b3d90f8a081db6
+after round key 2714dc7669e2411f7393ceec61463cf1
+after mix bd316f7ae3417a0de246c0a6bba329db
+round - 6
+bd316f7ae3417a0de246c0a6bba329db
+after shift bda3c00de33129a6e2416fdbbb467a7a
+after sub cd711ff34d2e4cc53bf8069ffe98bdbd
+after round key 8bc0751feca6cdb7a6e4b3cdb0f68b19
+after mix fad2464f579f16eeb129dc78feb376ef
+round - 5
+fad2464f579f16eeb129dc78feb376ef
+after shift fab3dcee57d27678b19f46effe29164f
+after sub 144b9399da7f0fc1566e98610c4cff92
+after round key 3216bb133d46e45f6afaac41df3e7c64
+after mix e8c362c518e75a65dc34e075ccb9860a
+round - 4
+e8c362c518e75a65dc34e075ccb9860a
+after shift e8b9e06518c38675dce7620acc345ac5
+after sub c8dba0bc3433dc3f93b0aba327284607
+after round key 702f7ee9f5571f2b481d741dc8cef1d1
+after mix 246aa1276566b82dd50891702dc15892
+round - 3
+246aa1276566b82dd50891702dc15892
+after shift 24c1912d656a5870d566a1922d08b827
+after sub a6ddacfabc585ed0b5d3f174fabf9a3d
+after round key a56c37b7c5c84391af1aeddecef4f255
+after mix 65ac65e58cc7af3b170842db53534ed3
+round - 2
+65ac65e58cc7af3b170842db53534ed3
+after shift 6553423b8cac4edb17c765d35308afe5
+after sub bc50f649f0aab69f8731bca950bf1b2a
+after round key a87348358a8b3093e468bd427e3d6fe8
+after mix 49e7fef6934376045eb7e17b025e8018
+round - 1
+49e7fef6934376045eb7e17b025e8018
+after shift 495ee10493e7807b5e43fe1802b776f6
+after sub a49de03022b03a039d640c346a200fd6
+after round key 0b23fbaf4cb20273841c8bd327fb7aff
+after mix 073f0f4b137b58bf09a29df64c55a3e3
+plain text = 0x9cdae54b43995239377944da09b9ac02
+before add round key 
+e94fc43f700286754ee27c67d173ed3a
+round - 9
+4eb424995b35b16b424caab9ba5fcd1b
+after shift 4e5faa6b5bb4cdb94235241bba4cb199
+after sub b684620557c680dbf6d9a644c05d56f9
+after round key 343d9426db0a5763d1404784a7dfa006
+after mix 840c497ae883b53b728740e73f1c9f62
+round - 8
+840c497ae883b53b728740e73f1c9f62
+after shift 841c403be80c9fe7728349623f87b57a
+after sub 4fc47249c8816eb01e41a4ab25ead2bd
+after round key 798df163c6f44f2bb51492d365f1c582
+after mix e79ba3b96018456bd1932d8ff15fec91
+round - 7
+e79ba3b96018456bd1932d8ff15fec91
+after shift e75f2d6b609bec8fd118a391f19345b9
+after sub b084fa0590e88373513471ac2b2268db
+after round key 2930d9c6a8d421c2f414664fc06c499c
+after mix c03a3cc04976e5458a5c918e0d577655
+round - 6
+c03a3cc04976e5458a5c918e0d577655
+after shift c0579145493a768e8a763c550d5ce5c0
+after sub 1fdaac68a4a20fe6cf0f6dedf3a72a1f
+after round key 596bc684052a8e945213d8bfbdc91cbb
+after mix aa66d569c73126e5c31505f5f6baea75
+round - 5
+aa66d569c73126e5c31505f5f6baea75
+after shift aaba05e5c766eaf5c331d575f6152669
+after sub 62c0362a31d3bb77332eb53fd62f23e4
+after round key 449d1ea0d6ea50e90fba811f055da012
+after mix ec0678f54148d65a1806c0f5ec6086e0
+round - 4
+ec0678f54148d65a1806c0f5ec6086e0
+after shift ec60c05a410686f5184878e0ec06d6f5
+after sub 83901f46f8a5dc7734d4c1a083a54a77
+after round key 3b64c11339c11f63ef791e1e6c43fda1
+after mix c97b320d8210b7a17b7abd2a8647f143
+round - 3
+c97b320d8210b7a17b7abd2a8647f143
+after shift c947bda1827bf12a7b103243867ab70d
+after sub 1216cdf111032b95037ca164dcbd20f3
+after round key 11a756bc689336d419b5bdcee8f6489b
+after mix ebb8141b37145b61812f80f19dc1bc2d
+round - 2
+ebb8141b37145b61812f80f19dc1bc2d
+after shift ebc1806137b8bcf18114142d9d2f5b1b
+after sub 3cdd3ad8b29a782b919b9bfa754e5744
+after round key 28fe84a4c8bbfe27f2c29a115bcc2386
+after mix 1e7e45d37bfa02293d0738b92c8330ad
+round - 1
+1e7e45d37bfa02293d0738b92c8330ad
+after shift 1e8338297b7e30b93dfa45ad2c0702d3
+after sub e941764c038a08db8b14681842386aa9
+after round key 46ff6dd36d8830ab926cefff0fe31f80
+after mix bc4f996d70ccd11345d4ff804a51bcd4
+plain text = 0xdc47ed3d112e5bd51f5d468e08baa37d
+before add round key 
+eb52142a4ffa3d92342ecfd40239c0f5
+round - 9
+4ca9f48c64cd0a8c3880190a6915e0d4
+after shift 4c15198c64a9e00a38cdf4d469800a8c
+after sub 5d2f8ef08cb7a0a37680ba19e43aa3f0
+after round key df9678d3007b771b51195bd983b8550f
+after mix 54ed2c779e57c7192970ac3fc4d7d0a2
+round - 8
+54ed2c779e57c7192970ac3fc4d7d0a2
+after shift 54d7ac199eedd03f29572ca2c470c777
+after sub fd0daa8edf5360254cda421a88d03102
+after round key cb4429a4d12641bee78f7462c8cb263d
+after mix 79219fc51af69a7eee58814983275de1
+round - 7
+79219fc51af69a7eee58814983275de1
+after shift 7927817e1a215d49eef69fe183589ac5
+after sub af3d918a437b8da499d66ee0415e3707
+after round key 3689b2497b472f153cf67903aa101640
+after mix 27802bc87ef226acfb4dc5c3ce8ab119
+round - 6
+27802bc87ef226acfb4dc5c3ce8ab119
+after shift 278ac5ac7e80b1c3fbf22b19ce4d26c8
+after sub 3dcf07aa8a3a563363040b8eec6523b1
+after round key 7b7e6d462bb2d741fe18bedca20b1515
+after mix 6cfd2699a8ee4a03fabaa96d97d9698e
+round - 5
+6cfd2699a8ee4a03fabaa96d97d9698e
+after shift 6cd9a903a8fd696dfaee268e97ba4a99
+after sub b8e5b7d56f21e4b3149923e685c05cf9
+after round key 9eb89f5f88180f2d280d17c656b2df0f
+after mix 41d097e0ccb734fd8b2d47151825f9f0
+round - 4
+41d097e0ccb734fd8b2d47151825f9f0
+after shift 412547fdccd0f9158bb797f0182d34e0
+after sub f8c216212760692fce20851734fa28a0
+after round key 4036c874e604aa3b158d5aa9db1c9f76
+after mix 7a027dcfd4797ea007b69e4400f718c1
+round - 3
+7a027dcfd4797ea007b69e4400f718c1
+after shift 7af79ea0d402184407797dc100b67ecf
+after sub bd26df47196a348638af13dd52798a5f
+after round key be97440a60fa29c722660f776632e237
+after mix 5b1a6f49894a289fd9378c5e0d789064
+round - 2
+5b1a6f49894a289fd9378c5e0d789064
+after shift 5b788c9f891a905ed94a6f640d372849
+after sub 57c1f06ef243969de55c068cf3b2eea4
+after round key 43e24e128862109186050767dd309a66
+after mix 7a1896090f79415c13284f9782a5e7d1
+round - 1
+7a1896090f79415c13284f9782a5e7d1
+after shift 7aa54f5c0f18e797137996d182284109
+after sub bd2992a7fb34b08582af355111eef840
+after round key 12978938953688f59bd7b2b65c358d69
+after mix d6ae2569c804726099bc204d6ebcbee1
+plain text = 0xee4fc42f7002798a8e4a7d7711dbec2a
+before add round key 
+f4e65bc3f047f371130f55fd27a9982d
+round - 9
+531dbb65db70c46f1fa183234c85b80c
+after shift 5385836fdb1db8231f70bb0c4ca1c465
+after sub 506741069fde9a32cbd0fe815df188bc
+after round key d2deb72513124d8aec491f413a737e43
+after mix 47cf0513de5617593ea720425a50f688
+round - 8
+47cf0513de5617593ea720425a50f688
+after shift 47502059decff6423e5605885aa71713
+after sub 166c54159c5fd6f6d1b9369746898782
+after round key 2025d73f922af76d7aec00ef069290bd
+after mix 1f7629ad5fa57ea622bfaa4e5d2ca26a
+round - 7
+1f7629ad5fa57ea622bfaa4e5d2ca26a
+after shift 1f2caaa65f76a24e22a5296a5dbf7ead
+after sub cb4262c5840f1ab694294c588df48a18
+after round key 52f64106bc33b80731095bbb66baab5f
+after mix f7d439f902456611b0117108af5232e7
+round - 6
+f7d439f902456611b0117108af5232e7
+after shift f752711102d43208b04539e7af1166f9
+after sub 26482ce36a19a1bffc685bb01be3d369
+after round key 60f9460fcb9120cd6174eee2558de5cd
+after mix db63462e86fb18d290e42d40397772cc
+round - 5
+db63462e86fb18d290e42d40397772cc
+after shift db772dd28663724090fb46cc39e4182e
+after sub 9f02fa7fdc001e72966398275bae34c3
+after round key b95fd2f53b39f5ecaaf7ac0788dcb735
+after mix 4a53b860e90011e30fabfeace0bf68e1
+round - 4
+4a53b860e90011e30fabfeace0bf68e1
+after shift 4abffee3e95368ac0f00b8e1e0ab1160
+after sub 5cf40c4deb50f7aafb529ae0a00ee390
+after round key e400d2182a3434be20ff455e4fe85446
+after mix aa9ac0de36721bcbb49c42ae1c6f76b0
+round - 3
+aa9ac0de36721bcbb49c42ae1c6f76b0
+after shift aa6f42cb369a76aeb472c0b01c9c1bde
+after sub 6206f65924370fbec61e1ffcc41c449c
+after round key 61b76d145da712ffdcd70356f0572cf4
+after mix 46020fe43a025b7403ce60f352b170ec
+round - 2
+46020fe43a025b7403ce60f352b170ec
+after shift 46b160743a0270f303020fec52ce5be4
+after sub 985690caa26ad07ed56afb8348ec57ae
+after round key 8c752eb6d84b5672b633fa68666e236c
+after mix 9fa6ffa793ed68a12362411730b5fb39
+round - 1
+9fa6ffa793ed68a12362411730b5fb39
+after shift 9fb541a193a6fb1723edff39306268a7
+after sub 6ed2f8f122c5638732537d5b08abf789
+after round key c16ce36e4cc75bf72b2bfabc457082a0
+after mix 335a51181920405e02b85fa3b14d58b3
+plain text = 0xc25214224ffa7d9e1d2ecfdc023980fa
+before add round key 
+1ae9d39d1a06771af63f269167806282
+round - 9
+bd12333b31314004fa91f04f0cac42a3
+after shift bdacf0043112424ffa3133a30c91403b
+after sub cdaa17302e39f692142e667181ac7249
+after round key 4f13e113a2f5212a33b787b1e62e84b6
+after mix d0453902bc9d87fa939a58e3955c182b
+round - 8
+d0453902bc9d87fa939a58e3955c182b
+after shift d05c58fabc4518e3939d392b959a8702
+after sub 60a75e147868344d22755b0bad37ea6a
+after round key 56eedd3e761d15d689206d73ed2cfd55
+after mix 9250af36a8938013059594b33866facd
+round - 7
+9250af36a8938013059594b33866facd
+after shift 92669413a850fab30593afcd38958036
+after sub 74d3e7826f6c144b36221b8076ad3a24
+after round key ed67c4415750b6fa93020c639de31b63
+after mix 31d506edd53ca200afced7487908f384
+round - 6
+31d506edd53ca200afced7487908f384
+after shift 3108d700d5d5f348af3c068479cea2ed
+after sub 2ebf0d52b5b57ed41b6da54fafec1a53
+after round key 680e67be143dffa68671101de1822cf7
+after mix a81ac2cf1a25115e76730ff03105971b
+round - 5
+a81ac2cf1a25115e76730ff03105971b
+after shift a8050f5e1a1a97f07625c21b317311cf
+after sub 6f36fb9d434385170fc2a8442e8fe35f
+after round key 496bd317a47a6e8933569c64fdfd60a9
+after mix c47c89d7ec5954d86a08e41b644c7091
+round - 4
+c47c89d7ec5954d86a08e41b644c7091
+after shift c44ce4d8ec7c701b6a598991640854d7
+after sub 885dae2d8301d0445815f2ac8cbffd0d
+after round key 30a970784265135083b82d1263594adb
+after mix 771c0ef43a34a3c95f33f99137c5530a
+round - 3
+771c0ef43a34a3c95f33f99137c5530a
+after shift 77c5f9c93a1c53915f340e0a3733a3f4
+after sub 02076912a2c450ac8428d7a3b26671ba
+after round key 01b6f25fdb544ded9ee1cb09862d19d2
+after mix 5f7d98a0fcf8341f0d1a3993ccd993e6
+round - 2
+5f7d98a0fcf8341f0d1a3993ccd993e6
+after shift 5fd9391ffc7d93930df898e6cc1a34a0
+after sub 84e55bcb55132222f3e1e2f527432847
+after round key 90c6e5b72f32a42e90b8e31e09c15c85
+after mix d77baa024c36f21f3087f29054722314
+round - 1
+d77baa024c36f21f3087f29054722314
+after shift d772f21f4c7b23903036aa145487f202
+after sub 0d1e04cb5d0332960824629bfdea046a
+after round key a2a01f5433010ae6115ce57cb0317143
+after mix 530f7c69c7d25992589b1f08dc3e6031
+plain text = 0xf4e65bcbf047b3502905beb9c74be72a
+before add round key 
+cba0cf15f34b6ae22f80a10a03000008
+round - 9
+6c5b2fb3d87c5dfc232e77d4682c2029
+after shift 6c2c77fcd85b20d4237c2f29682e5db3
+after sub b84202552d57541932014e4cf7c38d4b
+after round key 3afbf476a19b83a11598af8c90417bb4
+after mix db8a9381859b9791630f9e5c462291eb
+round - 8
+db8a9381859b9791630f9e5c462291eb
+after shift db229e91858a915c639b93eb460f9781
+after sub 9f94dfac67cfaca700e8223c98fb8591
+after round key a9dd5c8669ba8d3cabbd1444d8e092ae
+after mix 111aa30636a516e70d7d3e08bf03fd45
+round - 7
+111aa30636a516e70d7d3e08bf03fd45
+after shift 11033ee7361afd080da5a345bf7d1606
+after sub e3d5d1b0244321bff3297168f413ffa5
+after round key 7a61f2731c7f830e5609668b1f5ddee2
+after mix 7c32db0f4f9c172a7dbc324111292c6a
+round - 6
+7c32db0f4f9c172a7dbc324111292c6a
+after shift 7c29322a4f322c417d9cdb6a11bc170f
+after sub 014ca19592a142f8131c9f58e37887fb
+after round key 47fdcb793329c38a8e002a0aad16b15f
+after mix 66fffa6b17a141a486d565987bb7cd54
+round - 5
+66fffa6b17a141a486d565987bb7cd54
+after shift 66b765a417ffcd9886a1fa547bd5416b
+after sub d320bc1d877d80e2dcf114fd03b5f805
+after round key f57d949760446b7ce06520ddd0c77bf3
+after mix de8eb269b44ad91449ac79e46f7fe16e
+round - 4
+de8eb269b44ad91449ac79e46f7fe16e
+after shift de7f7914b48ee1e4494ab26e6facd969
+after sub 9c6baf9bc6e6e0aea45c3e4506aae5e4
+after round key 249f71ce078223ba7ff1e1fbe94c5232
+after mix 22237f7a7ac766c76ea1c398d524ffcb
+round - 3
+22237f7a7ac766c76ea1c398d524ffcb
+after shift 2224c3c77a23ff986ec77fcbd5a1667a
+after sub 94a63331bd327de245316b59b5f1d3bd
+after round key 9717a87cc4a260a35ff877f381babbd5
+after mix b20725c454c3a1938af1e4bcd4d44411
+round - 2
+b20725c454c3a1938af1e4bcd4d44411
+after shift b2d4e493540744bc8ac32511d4f1a1c4
+after sub 3e19ae22fd388678cf33c2e3192bf188
+after round key 2a3a105e87190074ac6ac30837a9854a
+after mix 7a7dfca5717f39ddf9d58cad01bf11fe
+round - 1
+7a7dfca5717f39ddf9d58cad01bf11fe
+after shift 7abf8cdd717d11adf97ffcfe01d539a5
+after sub bdf4f0c92c13e318696b550c09b55b29
+after round key 124aeb564211db687013d2eb446e2e00
+after mix e7efcf2217c05562b4fba2b78769e50f
+plain text = 0x14d38a1446dd09cfb165e06cbec01f5a
+before add round key 
+0400001c030000080400001d00000008
+round - 9
+a3fbe0ba2837371608aed6c36b2c2029
+after shift a32cd61628fb20c30837e0296bae37ba
+after sub 71424affee635433bfb2a04c05beb2c0
+after round key f3fbbcdc62af838b982b418c623c443f
+after mix c1ec5e1bfdd08d650ff62aad50d63c9f
+round - 8
+c1ec5e1bfdd08d650ff62aad50d63c9f
+after shift c1d62a65fdec3cad0fd05e9f50f68d1b
+after sub dd4a95bc21836d18fb609d6e6cd6b444
+after round key eb0316962ff64c835035ab162ccda37b
+after mix fc4ed10bb7f0f8a919dc49541515e8d1
+round - 7
+fc4ed10bb7f0f8a919dc49541515e8d1
+after shift fc1549a9b74ee85419f0d1d115dcf80b
+after sub 552fa4b720b6c8fd8e1751512f93e19e
+after round key cc9b8774188a6a4c2b3746b2c4ddc0d9
+after mix a6c1be7d970796b2551ef350e6f7e2f3
+round - 6
+a6c1be7d970796b2551ef350e6f7e2f3
+after shift a6f7f3b297c1e2505507bef3e61e967d
+after sub c5267e3e85dd3b6ced385a7ef5e93513
+after round key 839714d22455ba1e7024ef2cbb8703b7
+after mix d99df167af80807ad1ca7bf7b1f002cb
+round - 5
+d99df167af80807ad1ca7bf7b1f002cb
+after shift d9f07b7aaf9d02f7d180f1cbb1ca8067
+after sub e51703bd1b756a26513a2b5956103a0a
+after round key c34a2b37fc4c81b86dae1f798562b9fc
+after mix 1636cf7ac59db160d95cfada65440685
+round - 4
+1636cf7ac59db160d95cfada65440685
+after shift 1644fa60c53606dad99dcf85655cb17a
+after sub ff8614900724a57ae5755f67bca756bd
+after round key 4772cac5c640666e3ed880d95341e16b
+after mix de0227c1f526520f175ccc38bd862487
+round - 3
+de0227c1f526520f175ccc38bd862487
+after shift de86cc0ff502243817262787bd5c52c1
+after sub 9cdc27fb776aa67687233deacda748dd
+after round key 9f6dbcb60efabb379dea2140f9ec20b5
+after mix 95ec5ddc8af4cfc9135f83d976fcb4be
+round - 2
+95ec5ddc8af4cfc9135f83d976fcb4be
+after shift 95fc83c98aecb4d913f45dbe765fcfdc
+after sub ad554112cf83c6e582ba8d5a0f845f93
+after round key b976ff6eb5a240e9e1e38cb121062b51
+after mix a7875d235b73c95f96b2859ec4987475
+round - 1
+a7875d235b73c95f96b2859ec4987475
+after shift a798855f5b87749e96735d75c4b2c923
+after sub 89e2678457eacadf358f8d3f883e1232
+after round key 265c7c1b39e8f2af2cf70ad8c5e5671b
+after mix 54ee3493015bc91f58eb6cd6b1a5abe3
+plain text = 0x591e2874c8252da5292d97da029fe0ec
+done decrypting
+first byte of plain text = 
+29 0 0 c 1 0 0 0 c0 a8 1 d 24 0 0 8 
+next payload = 35
+payload length = 352
+In parser function
+next payload = 35
+In initiator identification header
+next payload = 41
+identifier type = 1
+ep->Idi = Èšž ep->IDi_;ength = 8
+next payload = 41
+payload length = 12
+In parser function
+next payload = 41
+In notify parser
+other notify:cookie is not present in the notify
+next payload = 36
+payload length = 8
+In parser function
+next payload = 36
+In responder identification header
+next payload = 39
+identifier type = 1
+next payload = 39
+payload length = 12
+In parser function
+next payload = 39
+In parse authentication header
+next payload = 33
+authenctication method = 2
+next payload = 33
+payload length = 28
+In parser function
+next payload = 33
+In SA parser
+next payload = 44
+payload length = 180
+proph->next_payload = 2
+proph->payload_length = 40
+proph->proposal_number = 1
+proph->protocol_id = 3
+proph->spi_size = 4
+proph->num_transforms = 3
+next payload  = 3
+payload length = 12
+transform type = 1
+transform id = 12
+next payload  = 3
+payload length = 8
+transform type = 3
+transform id = 2
+next payload  = 0
+payload length = 8
+transform type = 5
+transform id = 0
+ESN number
+ESP::Got the proposal supported by me
+next payload = 44
+payload length = 180
+In parser function
+next payload = 44
+In parse traffic selector initiator
+next payload = 45
+traffic selector type = 1
+next payload = 45
+payload length = 24
+In parser function
+next payload = 45
+In parse traffic selector responder
+next payload = 41
+traffic selector type = 1
+next payload = 41
+payload length = 24
+In parser function
+next payload = 41
+In notify parser
+other notify:cookie is not present in the notify
+next payload = 41
+payload length = 8
+In parser function
+next payload = 41
+In notify parser
+other notify:cookie is not present in the notify
+next payload = 41
+payload length = 8
+In parser function
+next payload = 41
+In notify parser
+other notify:cookie is not present in the notify
+next payload = 0
+payload length = 8
+In parser function
+next payload = 0
+I think it parsed the packet completely
+sk_pi: 5192c86b1a0959f4f35e28df476cf45d
+08e0e6bc
+sk_pr: 220ad6daf9eacdf514baf424932fcbfc
+e5d00fec
+IDi: 01000000c0a8010d
+IDr: 01000000c0a80110
+s_len = 8
+nb = 0
+s_len%64 = 8
+prf(sk_p,ID): 4aa4fa6a1c88c7c4a5a339efc5594728
+27a64a94
+OCTECTS: 6e9d7b22c0e1f8480000000000000000
+2920220800000000000003ac2100001c
+00004006616e62752069732074686520
+6d617373206775792200029002000010
+01010001000000080400000202000148
+020100250300000c0100000c800e0080
+0300000c0100000c800e00c00300000c
+0100000c800e01000300000801000003
+0300000c01000017800e00800300000c
+01000017800e00c00300000c01000017
+800e0100030000080300000103000008
+03000002030000080300000c03000008
+0300000d030000080300000e03000008
+03000005030000080200000103000008
+02000002030000080200000503000008
+02000006030000080200000703000008
+02000004030000080400000e03000008
+04000017030000080400001803000008
+04000005030000080400000f03000008
+04000010030000080400001203000008
+04000002030000080400001603000008
+04000013030000080400001403000008
+04000015030000080400001a03000008
+04000019030000080400001b03000008
+0400001c030000080400001d00000008
+0400001e00000134030100210300000c
+01000012800e00800300000c01000012
+800e00c00300000c01000012800e0100
+0300000c01000013800e00800300000c
+01000013800e00c00300000c01000013
+800e01000300000c01000014800e0080
+0300000c01000014800e00c00300000c
+01000014800e01000300000802000001
+03000008020000020300000802000005
+03000008020000060300000802000007
+0300000802000004030000080400000e
+03000008040000170300000804000018
+0300000804000005030000080400000f
+03000008040000100300000804000012
+03000008040000020300000804000016
+03000008040000130300000804000014
+0300000804000015030000080400001a
+0300000804000019030000080400001b
+030000080400001c030000080400001d
+000000080400001e2800008800020000
+269c869edd45902ab95efbd0aeec6170
+d78397f7ca24a2b8bcbd4c3adeea71fe
+0de1b1ef49a2791c744e0f8f55bc6920
+1c6f7ea08758a7e3c6960bb093f07c6e
+da7927012aee7bdf648c355e64d43d1d
+58e13f471e8e71baa89c7eed7a325924
+b165c549c9b34ca1f1d063a74087bbf6
+3c015770b1096e13026300de58b7732e
+290000240b20a34b012df1608344db6a
+03dbd14677e7fd962e8f314c8ba5ffda
+86da0b832900001c00004004ca30b7de
+80512531c1a9227fda5b93ec516cee0f
+0000001c00004005a1a2341d5a120c55
+63da5db79317bfbde02233f831323334
+3536373839303132333435364aa4fa6a
+1c88c7c4a5a339efc559472827a64a94
+s_len = 17
+nb = 0
+s_len%64 = 17
+prf(hello,key pad): 9306d04df18c61d617e1255ddc991e0a
+64b5aff6
+s_len = 976
+nb = 15
+s_len%64 = 16
+final auth value: fffa0afa7704d1435941b26db3d1b27b
+97f4cd52
+validation succeded
