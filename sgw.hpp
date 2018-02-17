@@ -8,6 +8,14 @@ using CryptoPP::ModularExponentiation;
 #define PORT 500
 #define BUFLEN 4096
 
+typedef struct esp_hdr_s
+{
+  uint32_t spi;
+  uint32_t sequence_number;
+  uint8_t IV[16];
+  uint8_t data[0];
+}esp_hdr_t;
+
 typedef struct isakmp_hdr_s
 {
   //uint8_t initiator_cookie[8];
@@ -301,6 +309,7 @@ public:
   }
 
   void recv(uint8_t * buf, int len, int fd);
+  void esp_recv(uint8_t * buf, int len, int fd);
   void doCalculation();
   void hasher(uint8_t pad, uint8_t * seed,uint8_t seed_len,uint32_t * hash);
   bool validate_authentication();
@@ -308,6 +317,9 @@ public:
   bool validate_integrity(uint8_t * buf, uint16_t len);
   void generate_intergity(uint8_t * buf, uint16_t len,
                           uint8_t * integrity_value, bool is_initiator);
+  bool validate_integrity_esp(uint8_t * buf, uint16_t len);
+  void generate_intergity_esp(uint8_t * buf, uint16_t len,
+                              uint8_t * integrity_value, bool is_initiator);
 };
 
 class parser

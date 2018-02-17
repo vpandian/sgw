@@ -10,6 +10,12 @@
 #include <iomanip>
 #include <endian.h>
 #include <sstream>
+#include <netinet/ip.h>
+#include <linux/if.h>
+#include <linux/if_tun.h>
+#include<fcntl.h>
+#include <sys/ioctl.h>
+#include <unistd.h>
 
 #include "crypto++/dh.h"
 using CryptoPP::DH;
@@ -21,7 +27,7 @@ using CryptoPP::ModularExponentiation;
 #include "hash.hpp"
 #include "isakmp.hpp"
 #include "aes.hpp"
-
+#include "tun.hpp"
 #include "sgw.hpp"
 parser p;
 
@@ -41,7 +47,7 @@ Integer shared_key;
 Integer public_key;
 using namespace std;
 
-
+int relayfd;
 
 void packet_parser(uint8_t * data, int len)
 {
@@ -595,7 +601,7 @@ void endpoint::generate_intergity(uint8_t * buf, uint16_t len,
 
   prf((uint32_t *)sk_a,buf,len,(uint32_t *)integrity_value);
 
-  print_hex("final integ value", integrity_value,20);
+  print_hex("final integ value", integrity_value,12);
 }
 
 bool endpoint::validate_integrity(uint8_t * buf, uint16_t len)
@@ -606,6 +612,115 @@ bool endpoint::validate_integrity(uint8_t * buf, uint16_t len)
   return (memcmp(T,buf+len,12) == 0);
 }
 
+void endpoint::generate_intergity_esp(uint8_t * buf, uint16_t len,
+                                  uint8_t * integrity_value, bool is_initiator)
+{
+  uint8_t * sk_a = is_initiator ? i_auth:r_auth;
+  print_hex("sk_a = ", sk_a,20);
+  print_hex("r_auth = ",r_auth,20);
+  print_hex("i_enc = ",i_enc,16);
+  print_hex("r_enc = ",r_enc,16);
+  cout << "len in generate integ = " << len << endl;
+  print_hex("final buf",buf,len);
+  
+  memset(integrity_value,0,20);
+  prf((uint32_t *)sk_a,buf,len,(uint32_t *)integrity_value);
+
+  print_hex("final integ value", integrity_value,12);
+}
+
+bool endpoint::validate_integrity_esp(uint8_t * buf, uint16_t len)
+{
+  uint32_t T[5];
+  generate_intergity_esp(buf,len,(uint8_t *)T,true);
+  print_hex("Received inegrity = ", buf+len,12);
+  return (memcmp(T,buf+len,12) == 0);
+}
+
+static int tun_fd = 0;
+void endpoint::esp_recv(uint8_t * buf, int len, int fd)
+{
+  cout << "In endpoint esp recv method" << endl;
+  if(tun_fd ==0) {
+    char tun_name[IFNAMSIZ];
+    /* Connect to the device */
+    strcpy(tun_name, "tun0");
+    tun_fd = tun_alloc(tun_name, IFF_TUN | IFF_NO_PI);  /* tun interface */
+    if(tun_fd < 0){
+      perror("Allocating interface");
+      exit(1);
+    }
+  }
+  esp_hdr_t * esph;
+  
+  esph = ((esp_hdr_t *)buf);
+  cout << hex << setw(8) << setfill('0') << ntohl(esph->spi) << dec << endl;
+  cout << hex << setw(8) << setfill('0') << ntohl(esph->sequence_number) << dec << endl;
+  uint8_t * encrypted_data = esph->data;
+  uint16_t encrypted_data_len =  len - sizeof(esp_hdr_t) - 12; // 12 is the authentication data
+  print_hex("Buf data: ",buf,len);
+  if(validate_integrity_esp(buf,len-12)) {
+      cout << "Integrity check succeeded for ESP" << endl;
+    } else {
+      cout << "Integrity check failed for ESP" << endl;
+    }
+
+  aes_128_cbc aes_object;
+  uint8_t PT[65000];
+  aes_object.AES128_CBC_decrypt_buffer(esph->data,PT,encrypted_data_len,i_enc,esph->IV);
+  print_hex("plain text esp = ", PT, encrypted_data_len);
+  ip * iph = (ip *) PT;
+  cout << "ip header len = " << ntohs(iph->ip_len) << endl;
+  struct sockaddr_in dst;
+  dst.sin_addr = iph->ip_dst;
+  dst.sin_family = AF_INET;
+  if(sendto(relayfd, PT, ntohs(iph->ip_len), 0, (struct sockaddr *)&dst, sizeof(dst)) < 0) {
+    perror("sendto() error");
+    exit(-1);
+  }
+  else {
+    cout << "sent successfully "<< endl;
+    uint8_t buffer[1500];
+    int nread;
+    /* Now read data coming from the kernel */
+    /* Note that "buffer" should be at least the MTU size of the interface, eg 1500 bytes */
+    cout << "Going to read on tun0" << endl;
+    nread = read(tun_fd,buffer,sizeof(buffer));
+    if(nread < 0) {
+      perror("Reading from interface");
+      close(tun_fd);
+      exit(1);
+    }
+
+    /* Do whatever with the data */
+    cout << "Read " << nread << " bytes from the tun " << endl;
+    print_hex("Response for ping: ",buffer,nread);
+
+    
+#if 0    
+    int relayfd_in;
+    // create raw socket for ESP packet relay
+    if((relayfd_in  = socket(AF_INET,SOCK_RAW,IPPROTO_ICMP)) == -1) {
+      perror("cannot create RAW ESP socket for relay");
+      exit(1);
+    }
+    
+    sockaddr_in si_other;
+    int recv_len = 0;
+    socklen_t s_len = sizeof(si_other);
+    uint8_t buf[BUFLEN];
+    if((recv_len = recvfrom(relayfd_in,buf,BUFLEN,0,(sockaddr *) &si_other,&s_len)) < 0) {
+      perror("Recv failed");
+      exit(1);
+    }
+    if (recv_len == 0) {
+      cout << "****** no more data recv len is 0******" << endl;
+    }
+    cout << "received length on relay_fd_in = " << recv_len << " " << ntohs(si_other.sin_port) << " " << hex << ntohl(si_other.sin_addr.s_addr)<< dec << endl;
+#endif     
+  }
+  
+}
 void endpoint::recv(uint8_t * buf, int len, int fd)
 {
   cout << "In endpoint recv method" << endl;
@@ -799,9 +914,26 @@ public:
 
     }
 
+  }
 
+  void esp_recv(uint16_t port, uint32_t ip_v4, uint8_t * data, int len, int fd)
+  {
+    cout << "Length of the ESP packet = " << len << endl;
+    esp_hdr_t * esph;
+    esph = ((esp_hdr_t *)data);
+    cout << hex << setw(8) << setfill('0') << ntohl(esph->spi) << dec << endl;
+    cout << hex << setw(8) << setfill('0') << ntohl(esph->sequence_number) << dec << endl;
+    uint32_t ispi = ntohl(esph->spi) & 0x7fffffff;
+    endpoint * ep = epdb[ispi];
+    cout << ep << endl;
+    cout << "Initiator spi = " << ep->iSPI << endl;
+    cout << "Responder spi = " << ep->rSPI << endl;
+    print_hex("ESP data = ", esph->data, len-sizeof(esp_hdr_t));
+    ep->esp_recv(data,len,fd);
 
   }
+
+
 };
 
 
@@ -813,7 +945,7 @@ protected:
   const uint32_t MAXEVENTS = 64;
   uint16_t port;
   epoll_event * events;
-  int lfd, efd;
+  int lfd, efd,rfd;
 
 public:
   listener()
@@ -834,7 +966,7 @@ public:
     port = _port;
 
     // create a UDP socket
-    if((lfd = socket(AF_INET,SOCK_DGRAM,IPPROTO_UDP)) == -1)
+    if((lfd = socket(AF_INET,SOCK_DGRAM | SOCK_NONBLOCK,IPPROTO_UDP)) == -1)
       {
 	perror("cannot create server listening socket");
 	exit(1);
@@ -856,13 +988,152 @@ public:
     si_me.sin_addr.s_addr = htonl(INADDR_ANY);
 
     // bind the socket to port
-
+    
     if(bind(lfd,(sockaddr *)&si_me, sizeof(si_me)) == -1)
       {
 	perror("cannot bind");
 	exit(1);
       }
 
+#ifdef USE_EPOLL
+    events = (epoll_event *)calloc(MAXEVENTS,sizeof(epoll_event));
+    if((efd = epoll_create(MAXEVENTS)) == -1) {
+      perror("epoll create error");
+      exit(1);
+    }
+    epoll_event ev;
+    ev.events = EPOLLIN | EPOLLET;
+    ev.data.fd = lfd;
+
+    if (epoll_ctl(efd,EPOLL_CTL_ADD,lfd,&ev)<0) {
+      perror("epoll create error");
+      exit(1);
+    }
+
+    // create raw socket for ESP packet
+    if((rfd = socket(AF_INET,SOCK_RAW | SOCK_NONBLOCK,IPPROTO_ESP)) == -1) {
+      perror("cannot create RAW ESP socket");
+      exit(1);
+    }
+    
+    epoll_event ev1;
+    ev1.events = EPOLLIN | EPOLLET;
+    ev1.data.fd = rfd;
+
+    if (epoll_ctl(efd,EPOLL_CTL_ADD,rfd,&ev1)<0) {
+      perror("epoll create error for raw socket");
+      exit(1);
+    }
+    // create raw socket for ESP packet relay
+    if((relayfd = socket(AF_INET,SOCK_RAW | SOCK_NONBLOCK,IPPROTO_RAW)) == -1) {
+      perror("cannot create RAW ESP socket for relay");
+      exit(1);
+    }
+    
+    int on = 1;
+    /* socket options, tell the kernel we provide the IP structure */
+    if(setsockopt(relayfd, IPPROTO_IP, IP_HDRINCL, &on, sizeof(on)) < 0) {
+      perror("setsockopt() for IP_HDRINCL error");
+      exit(1);
+    }
+#if 0 
+    epoll_event ev2;
+    ev2.events = EPOLLIN | EPOLLET;
+    ev2.data.fd = relayfd;
+
+    if (epoll_ctl(efd,EPOLL_CTL_ADD,relayfd,&ev2)<0) {
+      perror("epoll create error for raw socket");
+      exit(1);
+    }
+#endif
+    while(true)
+    {
+      int n = epoll_wait(efd, events,MAXEVENTS,-1);
+      for(int i = 0; i < n;i++) {
+        if(events[i].events != EPOLLIN && events[i].events != EPOLLHUP ) {	     
+          cout << "event not supported value = " << hex << events[i].events << dec << endl;
+          exit(1);
+        }
+        if(lfd == events[i].data.fd) {
+          while(true)
+          {
+            sockaddr_in si_other;
+            int recv_len = 0;
+            socklen_t s_len = sizeof(si_other);
+            uint8_t buf[BUFLEN];
+            if((recv_len = recvfrom(events[i].data.fd,buf,BUFLEN,0,(sockaddr *) &si_other,&s_len)) < 0) {
+              if(errno == EWOULDBLOCK || errno == EAGAIN) {
+                cout << "****** no more data ******" << endl;
+                break;
+              }
+              perror("Recv failed");
+              exit(1);
+            }
+            if (recv_len == 0) {
+              cout << "****** no more data recv len is 0******" << endl;
+              break;
+            }
+            cout << "received length = " << recv_len << " " << ntohs(si_other.sin_port) << " " << hex << ntohl(si_other.sin_addr.s_addr)<< dec << endl;
+            epm.recv(ntohs(si_other.sin_port),ntohl(si_other.sin_addr.s_addr),buf,recv_len, lfd);
+            cout << "****** get more data ******" << endl;
+          }
+        }
+        else if(rfd == events[i].data.fd) {
+          cout << "something is happeing in the esp recv block" << endl;
+          while(true)
+          {
+            sockaddr_in si_other;
+            int recv_len = 0;
+            socklen_t s_len = sizeof(si_other);
+            uint8_t buf[BUFLEN];
+            if((recv_len = recvfrom(events[i].data.fd,buf,BUFLEN,0,(sockaddr *) &si_other,&s_len)) < 0) {
+              if(errno == EWOULDBLOCK || errno == EAGAIN) {
+                cout << "****** no more data ESP packet******" << endl;
+                break;
+              }
+              perror("Recv failed in ESP packet");
+              exit(1);
+            }
+            if (recv_len == 0) {
+              cout << "****** no more data recv len is 0 in ESP packet******" << endl;
+              break;
+            }
+            cout << "received length = " << recv_len << " " << ntohs(si_other.sin_port) << " " << hex << ntohl(si_other.sin_addr.s_addr)<< dec << endl;
+            //print_hex("ESP PACKET",buf,recv_len);
+            epm.esp_recv(ntohs(si_other.sin_port),ntohl(si_other.sin_addr.s_addr),buf+20,recv_len-20, lfd); // fix this
+
+          }
+        }
+#if 0
+        else if(relayfd == events[i].data.fd) {
+          cout << "something is happeing in the relay recv block" << endl;
+          while(true)
+          {
+            sockaddr_in si_other;
+            int recv_len = 0;
+            socklen_t s_len = sizeof(si_other);
+            uint8_t buf[BUFLEN];
+            if((recv_len = recvfrom(events[i].data.fd,buf,BUFLEN,0,(sockaddr *) &si_other,&s_len)) < 0) {
+              if(errno == EWOULDBLOCK || errno == EAGAIN) {
+                cout << "****** no more data ESP packet******" << endl;
+                break;
+              }
+              perror("Recv failed in ESP packet");
+              exit(1);
+            }
+            if (recv_len == 0) {
+              cout << "****** no more data recv len is 0 in ESP packet******" << endl;
+              break;
+            }
+            cout << "received length = " << recv_len << " " << ntohs(si_other.sin_port) << " " << hex << ntohl(si_other.sin_addr.s_addr)<< dec << endl;
+            print_hex("Relay packet = ",buf,recv_len);
+
+          }
+        }
+#endif
+      }
+    }
+#else
     // Accept all the data
     while(true)
       {
@@ -883,6 +1154,7 @@ public:
 
 
       }
+#endif
 
   }
 };

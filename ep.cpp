@@ -61,6 +61,14 @@ void prf(uint32_t * K, uint8_t * S, uint32_t s_len, uint32_t *temp_hash)
   // copies the remaing and do the transform
   memcpy(temp_buf,S+(64*nb),s_len%64);
   temp_buf[s_len%64] = 0x80;
+  uint32_t r_len = 64-(s_len%64)-1; 
+
+  cout << "r_len = " << r_len << endl;
+
+  if(r_len<8) {
+    hmac_3.transform1(temp_buf);
+    memset(temp_buf,0, 64);
+  }
   uint32_t * lenp = (uint32_t *)(temp_buf + 60);
   *lenp = htonl((64+s_len)*8);
   hmac_3.transform1(temp_buf);
@@ -293,13 +301,18 @@ void endpoint::doCalculation()
   memcpy(i_enc,T8,16);
 
   cout << "auth inbound = " << hex << setw(8) << setfill('0') << htonl(T8[4]) << " " << htonl(T9[0]) << " " << htonl(T9[1])<< " " << htonl(T9[2]) << " " << htonl(T9[3])<< dec << endl;
+  memcpy(i_auth,&T8[4],4);
+  memcpy(i_auth+4,T9,16);
+  
 
   cout << "encr outbound = " << hex << setw(8) << setfill('0') << htonl(T9[4]) << " " <<htonl(T10[0]) << " "<< htonl(T10[1]) << " " << htonl(T10[2]) << dec << endl;
-  //memcpy(r_enc,T11,16);
-  //memcpy(r_enc,T11,16);
+  memcpy(r_enc,&T9[4],4);
+  memcpy(r_enc+4,T10,12);
 
 
   cout << "auth outbound = " << hex << setw(8) << setfill('0') << htonl(T10[3]) << " " << htonl(T10[4]) << " " << htonl(T11[0]) << " " << htonl(T11[1]) << " " << htonl(T11[2]) << dec << endl;
+  memcpy(r_auth,&T10[3],8);
+  memcpy(r_auth+8,T11,12);
 
   cout << "************** ep(1) = " << this << endl;
 
