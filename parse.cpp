@@ -101,6 +101,11 @@ void parser::parse_sa(uint8_t * data, int len, endpoint * ep)
       cout << "proph->protocol_id = " << (uint32_t)proph->protocol_id << endl;
       cout << "proph->spi_size = " << (uint32_t)proph->spi_size << endl;
       cout << "proph->num_transforms = " << (uint32_t)proph->num_transforms << endl;
+
+      if(proph->spi_size) {
+        ep->r_esp_spi = ntohl(*(proph->spi));
+        cout << "r esp spi = "<< hex << ep->r_esp_spi << dec << endl;
+      }
       
       isakmp_transform_hdr_t * transh = (isakmp_transform_hdr_t *)(((uint8_t *)(proph + 1)) + proph->spi_size);
       bool is_enc = false;

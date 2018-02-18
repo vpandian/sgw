@@ -638,7 +638,7 @@ bool endpoint::validate_integrity_esp(uint8_t * buf, uint16_t len)
 }
 
 static int tun_fd = 0;
-void endpoint::esp_recv(uint8_t * buf, int len, int fd)
+int endpoint::esp_recv(uint8_t * buf, int len, int fd)
 {
   cout << "In endpoint esp recv method" << endl;
   if(tun_fd ==0) {
@@ -696,6 +696,28 @@ void endpoint::esp_recv(uint8_t * buf, int len, int fd)
     cout << "Read " << nread << " bytes from the tun " << endl;
     print_hex("Response for ping: ",buffer,nread);
 
+    // add padding if necessary
+    if(nread%16) {
+      int remaing = nread%16;
+      int pad_offset = nread;
+      int pad_length_offset = nread + (16-remaing)-2;
+      int nh_offset = pad_length_offset + 1;
+      cout << "remainging = " << remaing << " pad offset = " << pad_offset << " pad length offset = " << pad_length_offset << " nh offset = " << nh_offset << endl;
+      buffer[pad_length_offset] = 16 - remaing -2;
+      buffer[nh_offset] = 0x04; // use definition from spec for next header
+      nread += 16 - remaing;
+    }
+
+    // build ESP packet and send it to the client
+    esph->spi = htonl(r_esp_spi);
+
+    // encrypt the reponse received
+    aes_object.AES128_CBC_encrypt_buffer(buffer,esph->data,nread,r_enc,esph->IV);
+    print_hex("ESP encrypted data = ",esph->data,nread);
+    
+    generate_intergity_esp((uint8_t *)esph,nread+sizeof(esp_hdr_t),esph->data+nread,false);
+    print_hex("Generated inegrity = ", esph->data+nread ,12);
+    return nread+sizeof(esp_hdr_t)+12;
     
 #if 0    
     int relayfd_in;
@@ -916,7 +938,7 @@ public:
 
   }
 
-  void esp_recv(uint16_t port, uint32_t ip_v4, uint8_t * data, int len, int fd)
+  int esp_recv(uint16_t port, uint32_t ip_v4, uint8_t * data, int len, int fd)
   {
     cout << "Length of the ESP packet = " << len << endl;
     esp_hdr_t * esph;
@@ -929,7 +951,7 @@ public:
     cout << "Initiator spi = " << ep->iSPI << endl;
     cout << "Responder spi = " << ep->rSPI << endl;
     print_hex("ESP data = ", esph->data, len-sizeof(esp_hdr_t));
-    ep->esp_recv(data,len,fd);
+    return ep->esp_recv(data,len,fd);
 
   }
 
@@ -1100,8 +1122,19 @@ public:
             }
             cout << "received length = " << recv_len << " " << ntohs(si_other.sin_port) << " " << hex << ntohl(si_other.sin_addr.s_addr)<< dec << endl;
             //print_hex("ESP PACKET",buf,recv_len);
-            epm.esp_recv(ntohs(si_other.sin_port),ntohl(si_other.sin_addr.s_addr),buf+20,recv_len-20, lfd); // fix this
-
+            int len = epm.esp_recv(ntohs(si_other.sin_port),ntohl(si_other.sin_addr.s_addr),buf+20,recv_len-20, rfd); // fix this
+            // send esp data to the client..
+            // change the ip header
+            ip * iph = (ip *) buf;
+            in_addr temp = iph->ip_dst;
+            iph->ip_dst = iph->ip_src;
+            iph->ip_src = temp;
+            ssize_t send_len = 0; 
+            if((send_len = sendto(events[i].data.fd,buf+20,len,0,(sockaddr *) &si_other,s_len)) < 0) {
+              perror("send failed in ESP packet");
+              exit(1);
+            }
+            cout << "ESP sent succesfully bytes = " << send_len << endl;
           }
         }
 #if 0

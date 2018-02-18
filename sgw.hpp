@@ -74,6 +74,7 @@ typedef struct isakmp_proposal_hdr_s
   uint8_t protocol_id;
   uint8_t spi_size;
   uint8_t num_transforms;
+  uint32_t spi[0];
 }isakmp_proposal_hdr_t;
 
 typedef struct isakmp_transform_atr_s
@@ -290,6 +291,7 @@ public:
 
   uint8_t authentication_initiator[20];
   uint8_t authentication_method;
+  uint32_t r_esp_spi;
 
   // traffic selectors 
   isakmp_traffic_selector_hdr_t * initiator_ts;
@@ -309,7 +311,7 @@ public:
   }
 
   void recv(uint8_t * buf, int len, int fd);
-  void esp_recv(uint8_t * buf, int len, int fd);
+  int esp_recv(uint8_t * buf, int len, int fd);
   void doCalculation();
   void hasher(uint8_t pad, uint8_t * seed,uint8_t seed_len,uint32_t * hash);
   bool validate_authentication();
