@@ -1,0 +1,27 @@
+
+
+                tun0   <============ USER =================>
+                20.0.0.1  
+                --+-----
+                  |	    |			 +---lo:2 30.0.0.1
+                  |         |			 |
+                  +-- SGW --+                    |         
+                192.168.1.6 |			 |	 |
+			    |                    |       |
+			    +------------------ RPI -----+
+			    |          192.168.1.13	 |
+			    |				 |
+			    eth				lo:1
+		  	    				10.0.0.1
+			<===== IP-SEC Tunnel =============>
+
+
+
+     left=10.0.0.1  (This lookback was created because while using 192.168.1.13 RPI was hanging) 
+     right=192.168.1.6
+IPSEC Tunnel is established betweeen 192.168.1.6 and 10.0.0.1
+
+
+     leftsubnet=30.0.0.0/24
+     rightsubnet=20.0.0.0/24
+User Data goes between 20.0.0.1 and 30.0.0.1
