@@ -1088,7 +1088,7 @@ public:
                 cout << "****** no more data ******" << endl;
                 break;
               }
-              perror("Recv failed");
+              perror("Recv failed in main loop");
               exit(1);
             }
             if (recv_len == 0) {
@@ -1177,7 +1177,7 @@ public:
 
 	if((recv_len = recvfrom(lfd,buf,BUFLEN,0,(sockaddr *) &si_other,&s_len)) == -1)
 	  {
-	    perror("Recv failed");
+	    perror("Recv failed in data");
 	    exit(1);
 	  }
 	cout << "received length = " << recv_len << " " << ntohs(si_other.sin_port) << " " << hex << ntohl(si_other.sin_addr.s_addr)<< dec << endl;
@@ -1279,7 +1279,7 @@ public:
 		    uint8_t buf[BUFLEN];
 		    if((recv_len = recvfrom(events[i].data.fd,buf,BUFLEN,0,(sockaddr *) &si_other,&s_len)) == -1)
 		      {
-			perror("Recv failed");
+			perror("Recv failed incomming connection");
 			exit(1);
 		      }
 		    cout << "si_other port = "

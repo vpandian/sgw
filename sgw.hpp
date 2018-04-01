@@ -14,7 +14,7 @@ typedef struct esp_hdr_s
   uint32_t sequence_number;
   uint8_t IV[16];
   uint8_t data[0];
-}esp_hdr_t;
+}__attribute__((packed)) esp_hdr_t;
 
 typedef struct isakmp_hdr_s
 {
@@ -28,14 +28,14 @@ typedef struct isakmp_hdr_s
   uint8_t flags;
   uint32_t message_id;
   uint32_t length;
-}isakmp_hdr_t;
+}__attribute__((packed)) isakmp_hdr_t;
 
 typedef struct isakmp_sa_hdr_s
 {
   uint8_t next_payload;
   uint8_t critical_bit;
   uint16_t payload_length;
-}isakmp_sa_hdr_t,isakmp_nonce_hdr_t,isakmp_common_hdr_t;
+}__attribute__((packed)) isakmp_sa_hdr_t,isakmp_nonce_hdr_t,isakmp_common_hdr_t;
 
 typedef struct isakmp_id_hdr_s
 {
@@ -44,7 +44,7 @@ typedef struct isakmp_id_hdr_s
   uint16_t payload_length;
   uint8_t id_type;
   uint8_t reserved[3];
-}isakmp_id_hdr_t;
+}__attribute__((packed)) isakmp_id_hdr_t;
 
 typedef struct isakmp_authentication_hdr_s
 {
@@ -53,7 +53,7 @@ typedef struct isakmp_authentication_hdr_s
   uint16_t payload_length;
   uint8_t auth_method;
   uint8_t reserved[3];
-}isakmp_authentication_hdr_t;
+}__attribute__((packed)) isakmp_authentication_hdr_t;
 
 typedef struct isakmp_transform_hdr_s
 {
@@ -63,7 +63,7 @@ typedef struct isakmp_transform_hdr_s
   uint8_t transform_type;
   uint8_t reserved;
   uint16_t transform_id;
-}isakmp_transform_hdr_t;
+}__attribute__((packed)) isakmp_transform_hdr_t;
 
 typedef struct isakmp_proposal_hdr_s
 {
@@ -75,14 +75,14 @@ typedef struct isakmp_proposal_hdr_s
   uint8_t spi_size;
   uint8_t num_transforms;
   uint32_t spi[0];
-}isakmp_proposal_hdr_t;
+}__attribute__((packed)) isakmp_proposal_hdr_t;
 
 typedef struct isakmp_transform_atr_s
 {
   uint16_t attribute_flag_type;
   uint16_t attribute_value;
 
-}isakmp_transform_atr_t;
+}__attribute__((packed)) isakmp_transform_atr_t;
 
 typedef struct isakmp_notify_hdr_s
 {
@@ -92,7 +92,7 @@ typedef struct isakmp_notify_hdr_s
   uint8_t protocol_id;
   uint8_t spi_size;
   uint16_t notify_message_type;
-}isakmp_notify_hdr_t;
+}__attribute__((packed)) isakmp_notify_hdr_t;
 
 typedef struct isakmp_encrypted_hdr_s
 {
@@ -100,7 +100,7 @@ typedef struct isakmp_encrypted_hdr_s
   uint8_t critical_bit;
   uint16_t payload_length;
   uint8_t initialization_vector[16];
-}isakmp_encrypted_hdr_t;
+}__attribute__((packed)) isakmp_encrypted_hdr_t;
 
 typedef struct isakmp_identification_hdr_s
 {
@@ -110,7 +110,7 @@ typedef struct isakmp_identification_hdr_s
   uint8_t id_type;
   uint8_t protocol_id;
   uint16_t port;
-}isakmp_identification_hdr_t;
+}__attribute__((packed)) isakmp_identification_hdr_t;
 
 typedef struct isakmp_certificate_request_hdr_s
 {
@@ -118,7 +118,7 @@ typedef struct isakmp_certificate_request_hdr_s
   uint8_t critical_bit;
   uint16_t payload_length;
   uint8_t certificate_type;
-}isakmp_certificate_request_hdr_t;
+}__attribute__((packed)) isakmp_certificate_request_hdr_t;
 
 typedef struct isakmp_configuration_hdr_s
 {
@@ -126,7 +126,7 @@ typedef struct isakmp_configuration_hdr_s
   uint8_t critical_bit;
   uint16_t payload_length;
   uint8_t type;
-}isakmp_configuration_hdr_t;
+}__attribute__((packed)) isakmp_configuration_hdr_t;
 
 typedef struct isakmp_traffic_selector_hdr_s
 {
@@ -136,7 +136,7 @@ typedef struct isakmp_traffic_selector_hdr_s
   uint8_t type;
   uint8_t res;
   uint16_t res1;
-}isakmp_traffic_selector_hdr_t;
+}__attribute__((packed)) isakmp_traffic_selector_hdr_t;
 
 
 typedef struct isakmp_ke_hdr_s
@@ -146,7 +146,7 @@ typedef struct isakmp_ke_hdr_s
   uint16_t payload_length;
   uint16_t dh_group;
   uint16_t reserved;
-}isakmp_ke_hdr_t;
+}__attribute__((packed)) isakmp_ke_hdr_t;
 
 union payload
 {
